@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Job - Registration</title>
+    <link rel="stylesheet" href="findjob.css">
+</head>
+<body>
+    <div class="registration-form">
+        <h2>Find Job - Registration</h2>
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="18" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+
+            <label for="Experience">Experience:</label>
+            <textarea id="Experience" name="Experience" rows="3" required></textarea>
+
+            <label for="marital-status">Marital Status:</label>
+            <select id="marital-status" name="marital-status" required>
+                <option value="">Select</option>
+                <option value="single">Single</option>
+                <option value="married">Married</option>
+                <option value="divorced">Divorced</option>
+                <option value="widowed">Widowed</option>
+            </select>
+
+            <label for="education">Education:</label>
+            <input type="text" id="education" name="education" required>
+
+            <label for="languages">Languages Known:</label>
+            <input type="text" id="languages" name="languages" required>
+
+            <label for="speak-english">Do you speak English?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="speak-english" value="yes" required> Yes</label>
+                <label><input type="radio" name="speak-english" value="no" required> No</label>
+            </div>
+
+            <label for="identity-proof">Identity Proof:</label>
+            <input type="file" id="identity-proof" name="identity-proof" accept=".jpg,.jpeg,.png,.pdf" required>
+
+            <button type="submit" class="submit-btn">Next</button>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            // Perform form validation here
+            // If validation is successful, redirect to findjob2.html
+            window.location.href = "findjob2.html";
+            return false; // Prevent form submission
+        }
+    </script>
+</body>
+</html>

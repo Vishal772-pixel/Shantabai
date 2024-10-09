@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Job - Services</title>
+    <link rel="stylesheet" href="findjob2.css">
+</head>
+<body>
+    <div class="services-form">
+        <h2>Find Job - Select Services</h2>
+        <form id="servicesForm" onsubmit="return validateServices()">
+            <label for="services">Interested in Services:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="services" value="cleaning"> Cleaning</label>
+                <label><input type="checkbox" name="services" value="laundry"> Laundry</label>
+                <label><input type="checkbox" name="services" value="cooking"> Cooking</label>
+                <label><input type="checkbox" name="services" value="childcare"> Child Care</label>
+                <label><input type="checkbox" name="services" value="seniorcare"> Senior Care</label>
+            </div>
+
+            <label for="job-type">Job Type:</label>
+            <select id="job-type" name="job-type" required>
+                <option value="" disabled selected>Select Job Type</option>
+                <option value="part-time">Part-Time</option>
+                <option value="full-time">Full-Time</option>
+            </select>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <script src="findjob2.js"></script>
+</body>
+</html>

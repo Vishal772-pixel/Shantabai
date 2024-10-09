@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<section>
+    <h2>Service Preferences</h2>
+    <label>Interested in Services:</label>
+    <div class="checkbox-group">
+        <label><input type="checkbox" name="services" value="cleaning"> Cleaning</label>
+        <label><input type="checkbox" name="services" value="laundry"> Laundry</label>
+        <label><input type="checkbox" name="services" value="cooking"> Cooking</label>
+        <label><input type="checkbox" name="services" value="childcare"> Child Care</label>
+        <label><input type="checkbox" name="services" value="seniorcare"> Senior Care</label>
+    </div>
+
+    <label for="frequency">Frequency of Services:</label>
+    <select id="frequency" required>
+        <option value="one-time">One-Time</option>
+        <option value="weekly">Weekly</option>
+        <option value="monthly">Monthly</option>
+    </select>
+    <label for="preferredDays">Duration:</label>
+    <input type="text" id="preferredDays" placeholder="e.g., 4 hours">
+
+    <label for="preferredDays">Preferred Days and Times:</label>
+    <input type="text" id="preferredDays" placeholder="e.g., Mondays at 3 PM">
+
+    <label for="specialRequests">Special Requests:</label>
+    <textarea id="specialRequests" rows="3"></textarea>
+</section>
+
+<section>
+    <h2>Payment Information</h2>
+    <label for="paymentMethod">Preferred Payment Method:</label>
+    <select id="paymentMethod" required>
+        <option value="credit-card">Credit Card</option>
+        <option value="paypal">PayPal</option>
+    </select>
+
+    <label for="billingAddress">Billing Address:</label>
+    <input type="text" id="billingAddress" required>
+
+    <label for="paymentHistory">Payment History:</label>
+    <textarea id="paymentHistory" rows="3" disabled></textarea>
+    <a href="findshantabai3.html">
+        <button type="submit" class="submit-btn">Next</button>
+    </a>
+</section>
+</body>
+</html>

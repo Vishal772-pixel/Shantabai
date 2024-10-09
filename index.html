@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="loading-container">
+        <div class="loader"></div>
+        <h1>Loading, please wait...</h1>
+    </div>
+
+    <div class="content">
+        <h2>Welcome to the Main Content!</h2>
+        <p>This is the content that appears after the loading transition.</p>
+    </div>
+
+    <script>
+        // Simulate content loading with a delay (e.g., 3 seconds)
+        window.addEventListener("load", function() {
+            setTimeout(function() {
+                document.querySelector(".loading-container").style.display = "none";
+                document.querySelector(".content").style.display = "block";
+            }, 3000); // Adjust the delay as needed
+        });
+    </script>
+
+</body>
+</html>
