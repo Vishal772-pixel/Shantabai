@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Payment Page</title>
+    <style>
+        /* Custom transition for buttons */
+        .btn {
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #4a4e69;
+            transform: scale(1.05);
+        }
+
+        /* Animation for payment methods */
+        .payment-option {
+            transition: transform 0.2s;
+        }
+
+        .payment-option:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <div class="container mx-auto p-6">
+        <h1 class="text-3xl font-bold text-center mb-6">Select Payment Method</h1>
+
+        <div class="bg-white p-6 rounded shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">Total Amount: <span id="total" class="text-blue-600">Rs 0.00</span></h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Paytm Option -->
+                <div class="payment-option p-4 bg-gray-200 rounded shadow hover:bg-gray-300">
+                    <h3 class="font-bold text-lg">Paytm</h3>
+                    <img src="Paytm-Logo.png" alt="Paytm" class="w-24 mx-auto my-2">
+                    <p class="text-gray-600">Pay using your Paytm wallet.</p>
+                    <button class="btn mt-4 bg-blue-600 text-white p-2 rounded w-full">Pay with Paytm</button>
+                </div>
+
+                <!-- PayPal Option -->
+                <div class="payment-option p-4 bg-gray-200 rounded shadow hover:bg-gray-300">
+                    <h3 class="font-bold text-lg">PayPal</h3>
+                    <img src="paypal.png" alt="PayPal" class="w-24 mx-auto my-2">
+                    <p class="text-gray-600">Pay securely with PayPal.</p>
+                    <button class="btn mt-4 bg-blue-600 text-white p-2 rounded w-full">Pay with PayPal</button>
+                </div>
+
+                <!-- BharatPe Option -->
+                <div class="payment-option p-4 bg-gray-200 rounded shadow hover:bg-gray-300">
+                    <h3 class="font-bold text-lg">BharatPe</h3>
+                    <img src="bharatpe.png" alt="BharatPe" class="w-24 mx-auto my-2">
+                    <p class="text-gray-600">Instant payments with BharatPe.</p>
+                    <button class="btn mt-4 bg-blue-600 text-white p-2 rounded w-full">Pay with BharatPe</button>
+                </div>
+                <div class="payment-option p-4 bg-gray-200 rounded shadow hover:bg-gray-300">
+                    <h3 class="font-bold text-lg">Additional Payment option</h3>
+                   <a href="">
+                    <button>Cash on Delievery</button>
+                   </a>
+                    <p class="text-gray-600">Instant payments with BharatPe.</p>
+                    <button class="btn mt-4 bg-blue-600 text-white p-2 rounded w-full">Cash on Delievery</button>
+                </div>
+
+
+            </div>
+        </div>
+
+        <footer class="mt-10 text-center">
+            <p class="text-gray-600">Contact us for assistance!</p>
+        </footer>
+    </div>
+</body>
+
+</html>
