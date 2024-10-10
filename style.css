@@ -25,6 +25,7 @@ body {
 
 .logo {
     height: 50px;
+    border-radius: 50%;
 }
 
 .search-bar {
@@ -257,3 +258,45 @@ footer {
             padding-left: 0;
         }
     }
+    .service-box button {
+        background-color: #ff6b6b; /* Button background color */
+        color: white; /* Button text color */
+        padding: 10px 20px; /* Button padding */
+        border: none; /* Remove default border */
+        border-radius: 25px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor on hover */
+        font-size: 16px; /* Font size */
+        text-transform: uppercase; /* Uppercase text */
+        letter-spacing: 1px; /* Spacing between letters */
+        transition: background-color 0.3s, transform 0.3s; /* Transition effects */
+        position: relative; /* For the hover effect */
+        overflow: hidden; /* To hide the overflow */
+    }
+    
+    .service-box button::after {
+        content: '';
+        position: absolute;
+        width: 300%;
+        height: 300%;
+        background: rgba(255, 255, 255, 0.2); /* Overlay effect */
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0); /* Start scaled down */
+        transition: transform 0.5s; /* Transition for overlay effect */
+        z-index: 0; /* Behind the button text */
+    }
+    
+    .service-box button:hover {
+        background-color: #f77; /* Change background color on hover */
+        transform: translateY(-3px); /* Slightly raise button */
+    }
+    
+    .service-box button:hover::after {
+        transform: translate(-50%, -50%) scale(1); /* Scale up overlay */
+    }
+    
+    .service-box button:focus {
+        outline: none; /* Remove focus outline */
+    }
+    

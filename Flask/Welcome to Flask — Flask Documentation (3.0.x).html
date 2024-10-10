@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://flask.palletsprojects.com/en/3.0.x/ -->
+<html lang="en" data-content_root="./"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Flask — Flask Documentation (3.0.x)</title>
+    <style type="text/css">:root, :host {
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+  --fa-font-light: normal 300 1em/1 "Font Awesome 6 Pro";
+  --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Pro";
+  --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+  --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-duotone-solid: normal 900 1em/1 "Font Awesome 6 Sharp Duotone";
+}
+
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+}
+
+.svg-inline--fa {
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0em;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.0714285705em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left {
+  margin-right: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-pull-right {
+  margin-left: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  top: 0.25em;
+}
+.svg-inline--fa.fa-fw {
+  width: var(--fa-fw-width, 1.25em);
+}
+
+.fa-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+.fa-layers svg.svg-inline--fa {
+  transform-origin: center center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, 0.25em 0.5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-counter-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  top: var(--fa-top, 0);
+  right: var(--fa-right, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top left;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: 0.625em;
+  line-height: 0.1em;
+  vertical-align: 0.225em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+  line-height: 0.0833333337em;
+  vertical-align: 0.125em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+  line-height: 0.0714285718em;
+  vertical-align: 0.0535714295em;
+}
+
+.fa-lg {
+  font-size: 1.25em;
+  line-height: 0.05em;
+  vertical-align: -0.075em;
+}
+
+.fa-xl {
+  font-size: 1.5em;
+  line-height: 0.0416666682em;
+  vertical-align: -0.125em;
+}
+
+.fa-2xl {
+  font-size: 2em;
+  line-height: 0.03125em;
+  vertical-align: -0.1875em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: var(--fa-li-margin, 2.5em);
+  padding-left: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: calc(-1 * var(--fa-li-width, 2em));
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.08em);
+  padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);
+}
+
+.fa-pull-left {
+  float: left;
+  margin-right: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right {
+  float: right;
+  margin-left: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-beat {
+  animation-name: fa-beat;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-bounce {
+  animation-name: fa-bounce;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+}
+
+.fa-fade {
+  animation-name: fa-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-beat-fade {
+  animation-name: fa-beat-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-flip {
+  animation-name: fa-flip;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-shake {
+  animation-name: fa-shake;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin {
+  animation-name: fa-spin;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 2s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse;
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  animation-name: fa-spin;
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, steps(8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat,
+.fa-bounce,
+.fa-fade,
+.fa-beat-fade,
+.fa-flip,
+.fa-pulse,
+.fa-shake,
+.fa-spin,
+.fa-spin-pulse {
+    animation-delay: -1ms;
+    animation-duration: 1ms;
+    animation-iteration-count: 1;
+    transition-delay: 0s;
+    transition-duration: 0s;
+  }
+}
+@keyframes fa-beat {
+  0%, 90% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@keyframes fa-bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@keyframes fa-flip {
+  50% {
+    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@keyframes fa-shake {
+  0% {
+    transform: rotate(-15deg);
+  }
+  4% {
+    transform: rotate(15deg);
+  }
+  8%, 24% {
+    transform: rotate(-18deg);
+  }
+  12%, 28% {
+    transform: rotate(18deg);
+  }
+  16% {
+    transform: rotate(-22deg);
+  }
+  20% {
+    transform: rotate(22deg);
+  }
+  32% {
+    transform: rotate(-12deg);
+  }
+  36% {
+    transform: rotate(12deg);
+  }
+  40%, 100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  transform: scale(1, -1);
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  transform: scale(-1, -1);
+}
+
+.fa-rotate-by {
+  transform: rotate(var(--fa-rotate-angle, 0));
+}
+
+.fa-stack {
+  display: inline-block;
+  vertical-align: middle;
+  height: 2em;
+  position: relative;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: var(--fa-stack-z-index, auto);
+}
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1.25em;
+}
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.sr-only,
+.fa-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-focusable:not(:focus),
+.fa-sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}
+
+.fad.fa-inverse,
+.fa-duotone.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}</style><link rel="stylesheet" type="text/css" href="./Welcome to Flask — Flask Documentation (3.0.x)_files/pygments.css">
+    <link rel="stylesheet" type="text/css" href="./Welcome to Flask — Flask Documentation (3.0.x)_files/flask.css">
+    <link rel="stylesheet" type="text/css" href="./Welcome to Flask — Flask Documentation (3.0.x)_files/tabs.css">
+    
+    <script src="./Welcome to Flask — Flask Documentation (3.0.x)_files/documentation_options.js.download"></script>
+    <script src="./Welcome to Flask — Flask Documentation (3.0.x)_files/doctools.js.download"></script>
+    <script src="./Welcome to Flask — Flask Documentation (3.0.x)_files/sphinx_highlight.js.download"></script>
+    
+    <link rel="icon" href="https://flask.palletsprojects.com/en/3.0.x/_static/shortcut-icon.png">
+    <link rel="index" title="Index" href="https://flask.palletsprojects.com/en/3.0.x/genindex/">
+    <link rel="search" title="Search" href="https://flask.palletsprojects.com/en/3.0.x/search/">
+    <link rel="next" title="Installation" href="https://flask.palletsprojects.com/en/3.0.x/installation/"> 
+  
+<!-- RTD Extra Head -->
+
+
+
+<script type="application/json" id="READTHEDOCS_DATA">{"ad_free": false, "api_host": "https://readthedocs.org", "builder": "sphinx", "canonical_url": null, "docroot": "/docs/", "features": {"docsearch_disabled": true}, "global_analytics_code": "UA-17997319-1", "language": "en", "page": "index", "programming_language": "py", "project": "flask", "proxied_api_host": "/_", "source_suffix": ".rst", "subprojects": {}, "theme": "flask", "user_analytics_code": "", "version": "3.0.x"}</script>
+
+<!--
+Using this variable directly instead of using `JSON.parse` is deprecated.
+The READTHEDOCS_DATA global variable will be removed in the future.
+-->
+<script type="text/javascript">
+READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerHTML);
+</script>
+
+
+
+<!-- end RTD <extrahead> -->
+<script async="" type="text/javascript" src="./Welcome to Flask — Flask Documentation (3.0.x)_files/readthedocs-addons.js.download"></script><meta name="readthedocs-project-slug" content="flask"><meta name="readthedocs-version-slug" content="3.0.x"><meta name="readthedocs-resolver-filename" content="/"><meta name="readthedocs-http-status" content="200"><script id="ethicaladsjs" type="text/javascript" async="true" src="./Welcome to Flask — Flask Documentation (3.0.x)_files/ethicalads.min.js.download"></script><style>[data-ea-publisher].loaded,[data-ea-type].loaded{font-size:14px;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-weight:normal;font-style:normal;letter-spacing:0px;vertical-align:baseline;line-height:1.3em}[data-ea-publisher].loaded a,[data-ea-type].loaded a{text-decoration:none}[data-ea-publisher].loaded .ea-pixel,[data-ea-type].loaded .ea-pixel{display:none}[data-ea-publisher].loaded .ea-content,[data-ea-type].loaded .ea-content{margin:1em 1em .5em 1em;padding:1em;background:rgba(0,0,0,.03);color:#505050}[data-ea-publisher].loaded .ea-content a:link,[data-ea-type].loaded .ea-content a:link{color:#505050}[data-ea-publisher].loaded .ea-content a:visited,[data-ea-type].loaded .ea-content a:visited{color:#505050}[data-ea-publisher].loaded .ea-content a:hover,[data-ea-type].loaded .ea-content a:hover{color:#373737}[data-ea-publisher].loaded .ea-content a:active,[data-ea-type].loaded .ea-content a:active{color:#373737}[data-ea-publisher].loaded .ea-content a strong,[data-ea-publisher].loaded .ea-content a b,[data-ea-type].loaded .ea-content a strong,[data-ea-type].loaded .ea-content a b{color:#088cdb}[data-ea-publisher].loaded .ea-callout a:link,[data-ea-type].loaded .ea-callout a:link{color:#6a6a6a}[data-ea-publisher].loaded .ea-callout a:visited,[data-ea-type].loaded .ea-callout a:visited{color:#6a6a6a}[data-ea-publisher].loaded .ea-callout a:hover,[data-ea-type].loaded .ea-callout a:hover{color:#505050}[data-ea-publisher].loaded .ea-callout a:active,[data-ea-type].loaded .ea-callout a:active{color:#505050}[data-ea-publisher].loaded .ea-callout a strong,[data-ea-publisher].loaded .ea-callout a b,[data-ea-type].loaded .ea-callout a strong,[data-ea-type].loaded .ea-callout a b{color:#088cdb}[data-ea-publisher].loaded .ea-callout a,[data-ea-type].loaded .ea-callout a{font-size:.8em}[data-ea-publisher].loaded .ea-domain,[data-ea-type].loaded .ea-domain{margin-top:.75em;font-size:.8em;text-align:center;color:#9d9d9d}[data-ea-publisher].loaded.dark .ea-content,[data-ea-type].loaded.dark .ea-content{background:rgba(255,255,255,.05);color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-content a:link,[data-ea-type].loaded.dark .ea-content a:link{color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-content a:visited,[data-ea-type].loaded.dark .ea-content a:visited{color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-content a:hover,[data-ea-type].loaded.dark .ea-content a:hover{color:#f6f6f6}[data-ea-publisher].loaded.dark .ea-content a:active,[data-ea-type].loaded.dark .ea-content a:active{color:#f6f6f6}[data-ea-publisher].loaded.dark .ea-content a strong,[data-ea-publisher].loaded.dark .ea-content a b,[data-ea-type].loaded.dark .ea-content a strong,[data-ea-type].loaded.dark .ea-content a b{color:#50baf9}[data-ea-publisher].loaded.dark .ea-callout a:link,[data-ea-type].loaded.dark .ea-callout a:link{color:#c3c3c3}[data-ea-publisher].loaded.dark .ea-callout a:visited,[data-ea-type].loaded.dark .ea-callout a:visited{color:#c3c3c3}[data-ea-publisher].loaded.dark .ea-callout a:hover,[data-ea-type].loaded.dark .ea-callout a:hover{color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-callout a:active,[data-ea-type].loaded.dark .ea-callout a:active{color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-callout a strong,[data-ea-publisher].loaded.dark .ea-callout a b,[data-ea-type].loaded.dark .ea-callout a strong,[data-ea-type].loaded.dark .ea-callout a b{color:#50baf9}[data-ea-publisher].loaded.dark .ea-domain,[data-ea-type].loaded.dark .ea-domain{color:#909090}@media(prefers-color-scheme: dark){[data-ea-publisher].loaded.adaptive .ea-content,[data-ea-type].loaded.adaptive .ea-content{background:rgba(255,255,255,.05);color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-content a:link,[data-ea-type].loaded.adaptive .ea-content a:link{color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-content a:visited,[data-ea-type].loaded.adaptive .ea-content a:visited{color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-content a:hover,[data-ea-type].loaded.adaptive .ea-content a:hover{color:#f6f6f6}[data-ea-publisher].loaded.adaptive .ea-content a:active,[data-ea-type].loaded.adaptive .ea-content a:active{color:#f6f6f6}[data-ea-publisher].loaded.adaptive .ea-content a strong,[data-ea-publisher].loaded.adaptive .ea-content a b,[data-ea-type].loaded.adaptive .ea-content a strong,[data-ea-type].loaded.adaptive .ea-content a b{color:#50baf9}[data-ea-publisher].loaded.adaptive .ea-callout a:link,[data-ea-type].loaded.adaptive .ea-callout a:link{color:#c3c3c3}[data-ea-publisher].loaded.adaptive .ea-callout a:visited,[data-ea-type].loaded.adaptive .ea-callout a:visited{color:#c3c3c3}[data-ea-publisher].loaded.adaptive .ea-callout a:hover,[data-ea-type].loaded.adaptive .ea-callout a:hover{color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-callout a:active,[data-ea-type].loaded.adaptive .ea-callout a:active{color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-callout a strong,[data-ea-publisher].loaded.adaptive .ea-callout a b,[data-ea-type].loaded.adaptive .ea-callout a strong,[data-ea-type].loaded.adaptive .ea-callout a b{color:#50baf9}[data-ea-publisher].loaded.adaptive .ea-domain,[data-ea-type].loaded.adaptive .ea-domain{color:#909090}}[data-ea-publisher].loaded .ea-content,[data-ea-type].loaded .ea-content{border:0px;border-radius:3px;box-shadow:0px 2px 3px rgba(0,0,0,.15)}[data-ea-publisher].loaded.raised .ea-content,[data-ea-type].loaded.raised .ea-content{border:0px;border-radius:3px;box-shadow:0px 2px 3px rgba(0,0,0,.15)}[data-ea-publisher].loaded.bordered .ea-content,[data-ea-type].loaded.bordered .ea-content{border:1px solid rgba(0,0,0,.04);border-radius:3px;box-shadow:none}[data-ea-publisher].loaded.bordered.dark .ea-content,[data-ea-type].loaded.bordered.dark .ea-content{border:1px solid rgba(255,255,255,.07)}@media(prefers-color-scheme: dark){[data-ea-publisher].loaded.bordered.adaptive .ea-content,[data-ea-type].loaded.bordered.adaptive .ea-content{border:1px solid rgba(255,255,255,.07)}}[data-ea-publisher].loaded.flat .ea-content,[data-ea-type].loaded.flat .ea-content{border:0px;border-radius:3px;box-shadow:none}[data-ea-type=image].loaded,[data-ea-publisher]:not([data-ea-type]).loaded,.ea-type-image{display:inline-block}[data-ea-type=image].loaded .ea-content,[data-ea-publisher]:not([data-ea-type]).loaded .ea-content,.ea-type-image .ea-content{max-width:180px;overflow:auto;text-align:center}[data-ea-type=image].loaded .ea-content>a>img,[data-ea-publisher]:not([data-ea-type]).loaded .ea-content>a>img,.ea-type-image .ea-content>a>img{width:120px;height:90px;display:inline-block}[data-ea-type=image].loaded .ea-content>.ea-text,[data-ea-publisher]:not([data-ea-type]).loaded .ea-content>.ea-text,.ea-type-image .ea-content>.ea-text{margin-top:1em;font-size:1em;text-align:center}[data-ea-type=image].loaded .ea-callout,[data-ea-publisher]:not([data-ea-type]).loaded .ea-callout,.ea-type-image .ea-callout{max-width:180px;margin:0em 1em 1em 1em;padding-left:1em;padding-right:1em;font-style:italic;text-align:right}[data-ea-type=image].loaded.horizontal .ea-content,[data-ea-publisher]:not([data-ea-type]).loaded.horizontal .ea-content,.ea-type-image.horizontal .ea-content{max-width:320px}[data-ea-type=image].loaded.horizontal .ea-content>a>img,[data-ea-publisher]:not([data-ea-type]).loaded.horizontal .ea-content>a>img,.ea-type-image.horizontal .ea-content>a>img{float:left;margin-right:1em}[data-ea-type=image].loaded.horizontal .ea-content .ea-text,[data-ea-publisher]:not([data-ea-type]).loaded.horizontal .ea-content .ea-text,.ea-type-image.horizontal .ea-content .ea-text{margin-top:0em;text-align:left;overflow:auto}[data-ea-type=image].loaded.horizontal .ea-callout,[data-ea-publisher]:not([data-ea-type]).loaded.horizontal .ea-callout,.ea-type-image.horizontal .ea-callout{max-width:320px;text-align:right}[data-ea-type=text].loaded,.ea-type-text{font-size:14px}[data-ea-type=text].loaded .ea-content,.ea-type-text .ea-content{text-align:left}[data-ea-type=text].loaded .ea-callout,.ea-type-text .ea-callout{margin:.5em 1em 1em 1em;padding-left:1em;padding-right:1em;text-align:right;font-style:italic}[data-ea-style=stickybox].loaded{position:fixed;bottom:20px;right:20px;z-index:100}[data-ea-style=stickybox].loaded .ea-type-image .ea-stickybox-hide{cursor:pointer;position:absolute;top:.75em;right:.75em;background-color:#fefefe;border:1px solid #088cdb;border-radius:50%;color:#088cdb;font-size:1em;text-align:center;height:1.5em;width:1.5em;line-height:1.4}@media(max-width: 1300px){[data-ea-style=stickybox].loaded{position:static;bottom:0;right:0;margin:auto;text-align:center}[data-ea-style=stickybox].loaded .ea-stickybox-hide{display:none}}@media(min-width: 1301px){[data-ea-style=stickybox].loaded .ea-type-image .ea-content{background:#dcdcdc}[data-ea-style=stickybox].loaded.dark .ea-type-image .ea-content{background:#505050}}@media(min-width: 1301px)and (prefers-color-scheme: dark){[data-ea-style=stickybox].loaded.adaptive .ea-type-image .ea-content{background:#505050}}[data-ea-style=fixedfooter].loaded{position:fixed;bottom:0;left:0;z-index:200;width:100%;max-width:100%}[data-ea-style=fixedfooter].loaded .ea-type-text{width:100%;max-width:100%;display:flex;z-index:200;background:#dcdcdc}[data-ea-style=fixedfooter].loaded .ea-type-text .ea-content{border:0px;border-radius:3px;box-shadow:none}[data-ea-style=fixedfooter].loaded .ea-type-text .ea-content{background-color:inherit;max-width:100%;margin:0;padding:1em;flex:auto}[data-ea-style=fixedfooter].loaded .ea-type-text .ea-callout{max-width:100%;margin:0;padding:1em;flex:initial}@media(max-width: 576px){[data-ea-style=fixedfooter].loaded .ea-type-text .ea-callout{display:none}}[data-ea-style=fixedfooter].loaded .ea-type-text .ea-fixedfooter-hide{cursor:pointer;color:#505050;padding:1em;flex:initial;margin:auto 0}[data-ea-style=fixedfooter].loaded .ea-type-text .ea-fixedfooter-hide span{padding:.25em;font-size:.8em;font-weight:bold;border:.15em solid #505050;border-radius:.5em;white-space:nowrap}[data-ea-style=fixedfooter].loaded.dark .ea-type-text{background:#505050}[data-ea-style=fixedfooter].loaded.dark .ea-type-text .ea-fixedfooter-hide span{color:#dcdcdc;border-color:#dcdcdc}@media(prefers-color-scheme: dark){[data-ea-style=fixedfooter].loaded.adaptive .ea-type-text{background:#505050}[data-ea-style=fixedfooter].loaded.adaptive .ea-type-text .ea-fixedfooter-hide span{color:#dcdcdc;border-color:#dcdcdc}}</style><script src="./Welcome to Flask — Flask Documentation (3.0.x)_files/saved_resource" type="text/javascript" async=""></script></head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="https://flask.palletsprojects.com/en/3.0.x/genindex/" title="General Index" accesskey="I">index</a></li>
+        <li class="right">
+          <a href="https://flask.palletsprojects.com/en/3.0.x/py-modindex/" title="Python Module Index">modules</a> |</li>
+        <li class="right">
+          <a href="https://flask.palletsprojects.com/en/3.0.x/installation/" title="Installation" accesskey="N">next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="https://flask.palletsprojects.com/en/3.0.x/#">Flask Documentation (3.0.x)</a> »</li>
+        <li class="nav-item nav-item-this"><a href="https://flask.palletsprojects.com/en/3.0.x/">Welcome to Flask</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section class="hide-header" id="welcome-to-flask">
+<h1>Welcome to Flask<a class="headerlink" href="https://flask.palletsprojects.com/en/3.0.x/#welcome-to-flask" title="Link to this heading">¶</a></h1>
+<img alt="_images/flask-horizontal.png" class="align-center" src="./Welcome to Flask — Flask Documentation (3.0.x)_files/flask-horizontal.webp">
+<p>Welcome to Flask’s documentation. Get started with <a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/installation/"><span class="doc">Installation</span></a>
+and then get an overview with the <a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/quickstart/"><span class="doc">Quickstart</span></a>. There is also a
+more detailed <a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/tutorial/"><span class="doc">Tutorial</span></a> that shows how to create a small but
+complete application with Flask. Common patterns are described in the
+<a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/patterns/"><span class="doc">Patterns for Flask</span></a> section. The rest of the docs describe each
+component of Flask in detail, with a full reference in the <a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/api/"><span class="doc">API</span></a>
+section.</p>
+<p>Flask depends on the <a class="reference external" href="https://werkzeug.palletsprojects.com/">Werkzeug</a> WSGI toolkit, the <a class="reference external" href="https://jinja.palletsprojects.com/">Jinja</a> template engine, and the
+<a class="reference external" href="https://click.palletsprojects.com/">Click</a> CLI toolkit. Be sure to check their documentation as well as Flask’s when
+looking for information.</p>
+<section id="user-s-guide">
+<h2>User’s Guide<a class="headerlink" href="https://flask.palletsprojects.com/en/3.0.x/#user-s-guide" title="Link to this heading">¶</a></h2>
+<p>Flask provides configuration and conventions, with sensible defaults, to get started.
+This section of the documentation explains the different parts of the Flask framework
+and how they can be used, customized, and extended. Beyond Flask itself, look for
+community-maintained extensions to add even more functionality.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/installation/">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/installation/#python-version">Python Version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/installation/#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/installation/#virtual-environments">Virtual environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/installation/#install-flask">Install Flask</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/quickstart/">Quickstart</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/quickstart/#a-minimal-application">A Minimal Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/quickstart/#debug-mode">Debug Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/quickstart/#html-escaping">HTML Escaping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/quickstart/#routing">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/quickstart/#static-files">Static Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/quickstart/#rendering-templates">Rendering Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/quickstart/#accessing-request-data">Accessing Request Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/quickstart/#redirects-and-errors">Redirects and Errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/quickstart/#about-responses">About Responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/quickstart/#sessions">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/quickstart/#message-flashing">Message Flashing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/quickstart/#logging">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/quickstart/#hooking-in-wsgi-middleware">Hooking in WSGI Middleware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/quickstart/#using-flask-extensions">Using Flask Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/quickstart/#deploying-to-a-web-server">Deploying to a Web Server</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/tutorial/">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/tutorial/layout/">Project Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/tutorial/factory/">Application Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/tutorial/database/">Define and Access the Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/tutorial/views/">Blueprints and Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/tutorial/templates/">Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/tutorial/static/">Static Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/tutorial/blog/">Blog Blueprint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/tutorial/install/">Make the Project Installable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/tutorial/tests/">Test Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/tutorial/deploy/">Deploy to Production</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/tutorial/next/">Keep Developing!</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/templating/">Templates</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/templating/#jinja-setup">Jinja Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/templating/#standard-context">Standard Context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/templating/#controlling-autoescaping">Controlling Autoescaping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/templating/#registering-filters">Registering Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/templating/#context-processors">Context Processors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/templating/#streaming">Streaming</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/testing/">Testing Flask Applications</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/testing/#identifying-tests">Identifying Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/testing/#fixtures">Fixtures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/testing/#sending-requests-with-the-test-client">Sending Requests with the Test Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/testing/#following-redirects">Following Redirects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/testing/#accessing-and-modifying-the-session">Accessing and Modifying the Session</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/testing/#running-commands-with-the-cli-runner">Running Commands with the CLI Runner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/testing/#tests-that-depend-on-an-active-context">Tests that depend on an Active Context</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/errorhandling/">Handling Application Errors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/errorhandling/#error-logging-tools">Error Logging Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/errorhandling/#error-handlers">Error Handlers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/errorhandling/#custom-error-pages">Custom Error Pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/errorhandling/#blueprint-error-handlers">Blueprint Error Handlers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/errorhandling/#returning-api-errors-as-json">Returning API Errors as JSON</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/errorhandling/#logging">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/errorhandling/#debugging">Debugging</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/debugging/">Debugging Application Errors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/debugging/#in-production">In Production</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/debugging/#the-built-in-debugger">The Built-In Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/debugging/#external-debuggers">External Debuggers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/logging/">Logging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/logging/#basic-configuration">Basic Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/logging/#email-errors-to-admins">Email Errors to Admins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/logging/#injecting-request-information">Injecting Request Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/logging/#other-libraries">Other Libraries</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/config/">Configuration Handling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/config/#configuration-basics">Configuration Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/config/#debug-mode">Debug Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/config/#builtin-configuration-values">Builtin Configuration Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/config/#configuring-from-python-files">Configuring from Python Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/config/#configuring-from-data-files">Configuring from Data Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/config/#configuring-from-environment-variables">Configuring from Environment Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/config/#configuration-best-practices">Configuration Best Practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/config/#development-production">Development / Production</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/config/#instance-folders">Instance Folders</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/signals/">Signals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/signals/#core-signals">Core Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/signals/#subscribing-to-signals">Subscribing to Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/signals/#creating-signals">Creating Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/signals/#sending-signals">Sending Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/signals/#signals-and-flask-s-request-context">Signals and Flask’s Request Context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/signals/#decorator-based-signal-subscriptions">Decorator Based Signal Subscriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/views/">Class-based Views</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/views/#basic-reusable-view">Basic Reusable View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/views/#url-variables">URL Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/views/#view-lifetime-and-self">View Lifetime and <code class="docutils literal notranslate"><span class="pre">self</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/views/#view-decorators">View Decorators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/views/#method-hints">Method Hints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/views/#method-dispatching-and-apis">Method Dispatching and APIs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/lifecycle/">Application Structure and Lifecycle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/lifecycle/#application-setup">Application Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/lifecycle/#serving-the-application">Serving the Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/lifecycle/#how-a-request-is-handled">How a Request is Handled</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/appcontext/">The Application Context</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/appcontext/#purpose-of-the-context">Purpose of the Context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/appcontext/#lifetime-of-the-context">Lifetime of the Context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/appcontext/#manually-push-a-context">Manually Push a Context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/appcontext/#storing-data">Storing Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/appcontext/#events-and-signals">Events and Signals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/reqcontext/">The Request Context</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/reqcontext/#purpose-of-the-context">Purpose of the Context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/reqcontext/#lifetime-of-the-context">Lifetime of the Context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/reqcontext/#manually-push-a-context">Manually Push a Context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/reqcontext/#how-the-context-works">How the Context Works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/reqcontext/#callbacks-and-errors">Callbacks and Errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/reqcontext/#notes-on-proxies">Notes On Proxies</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/blueprints/">Modular Applications with Blueprints</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/blueprints/#why-blueprints">Why Blueprints?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/blueprints/#the-concept-of-blueprints">The Concept of Blueprints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/blueprints/#my-first-blueprint">My First Blueprint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/blueprints/#registering-blueprints">Registering Blueprints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/blueprints/#nesting-blueprints">Nesting Blueprints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/blueprints/#blueprint-resources">Blueprint Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/blueprints/#building-urls">Building URLs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/blueprints/#blueprint-error-handlers">Blueprint Error Handlers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/extensions/">Extensions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/extensions/#finding-extensions">Finding Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/extensions/#using-extensions">Using Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/extensions/#building-extensions">Building Extensions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/cli/">Command Line Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/cli/#application-discovery">Application Discovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/cli/#run-the-development-server">Run the Development Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/cli/#open-a-shell">Open a Shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/cli/#environment-variables-from-dotenv">Environment Variables From dotenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/cli/#environment-variables-from-virtualenv">Environment Variables From virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/cli/#custom-commands">Custom Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/cli/#plugins">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/cli/#custom-scripts">Custom Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/cli/#pycharm-integration">PyCharm Integration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/server/">Development Server</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/server/#command-line">Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/server/#in-code">In Code</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/shell/">Working with the Shell</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/shell/#command-line-interface">Command Line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/shell/#creating-a-request-context">Creating a Request Context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/shell/#firing-before-after-request">Firing Before/After Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/shell/#further-improving-the-shell-experience">Further Improving the Shell Experience</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/patterns/">Patterns for Flask</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/patterns/packages/">Large Applications as Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/patterns/appfactories/">Application Factories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/patterns/appdispatch/">Application Dispatching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/patterns/urlprocessors/">Using URL Processors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/patterns/sqlite3/">Using SQLite 3 with Flask</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/patterns/sqlalchemy/">SQLAlchemy in Flask</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/patterns/fileuploads/">Uploading Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/patterns/caching/">Caching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/patterns/viewdecorators/">View Decorators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/patterns/wtforms/">Form Validation with WTForms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/patterns/templateinheritance/">Template Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/patterns/flashing/">Message Flashing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/patterns/javascript/">JavaScript, <code class="docutils literal notranslate"><span class="pre">fetch</span></code>, and JSON</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/patterns/lazyloading/">Lazily Loading Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/patterns/mongoengine/">MongoDB with MongoEngine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/patterns/favicon/">Adding a favicon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/patterns/streaming/">Streaming Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/patterns/deferredcallbacks/">Deferred Request Callbacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/patterns/methodoverrides/">Adding HTTP Method Overrides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/patterns/requestchecksum/">Request Content Checksums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/patterns/celery/">Background Tasks with Celery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/patterns/subclassing/">Subclassing Flask</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/patterns/singlepageapplications/">Single-Page Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/web-security/">Security Considerations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/web-security/#cross-site-scripting-xss">Cross-Site Scripting (XSS)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/web-security/#cross-site-request-forgery-csrf">Cross-Site Request Forgery (CSRF)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/web-security/#json-security">JSON Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/web-security/#security-headers">Security Headers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/web-security/#copy-paste-to-terminal">Copy/Paste to Terminal</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/deploying/">Deploying to Production</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/deploying/#self-hosted-options">Self-Hosted Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/deploying/#hosting-platforms">Hosting Platforms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/async-await/">Using <code class="docutils literal notranslate"><span class="pre">async</span></code> and <code class="docutils literal notranslate"><span class="pre">await</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/async-await/#performance">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/async-await/#background-tasks">Background tasks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/async-await/#when-to-use-quart-instead">When to use Quart instead</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/async-await/#extensions">Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/async-await/#other-event-loops">Other event loops</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="api-reference">
+<h2>API Reference<a class="headerlink" href="https://flask.palletsprojects.com/en/3.0.x/#api-reference" title="Link to this heading">¶</a></h2>
+<p>If you are looking for information on a specific function, class or
+method, this part of the documentation is for you.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/api/">API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/api/#application-object">Application Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/api/#blueprint-objects">Blueprint Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/api/#incoming-request-data">Incoming Request Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/api/#response-objects">Response Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/api/#sessions">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/api/#session-interface">Session Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/api/#test-client">Test Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/api/#test-cli-runner">Test CLI Runner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/api/#application-globals">Application Globals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/api/#useful-functions-and-classes">Useful Functions and Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/api/#message-flashing">Message Flashing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/api/#module-flask.json">JSON Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/api/#template-rendering">Template Rendering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/api/#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/api/#stream-helpers">Stream Helpers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/api/#useful-internals">Useful Internals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/api/#signals">Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/api/#class-based-views">Class-Based Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/api/#url-route-registrations">URL Route Registrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/api/#view-function-options">View Function Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/api/#command-line-interface">Command Line Interface</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="additional-notes">
+<h2>Additional Notes<a class="headerlink" href="https://flask.palletsprojects.com/en/3.0.x/#additional-notes" title="Link to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/design/">Design Decisions in Flask</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/design/#the-explicit-application-object">The Explicit Application Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/design/#the-routing-system">The Routing System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/design/#one-template-engine">One Template Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/design/#what-does-micro-mean">What does “micro” mean?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/design/#thread-locals">Thread Locals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/design/#async-await-and-asgi-support">Async/await and ASGI support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/design/#what-flask-is-what-flask-is-not">What Flask is, What Flask is Not</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/extensiondev/">Flask Extension Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/extensiondev/#naming">Naming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/extensiondev/#the-extension-class-and-initialization">The Extension Class and Initialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/extensiondev/#adding-behavior">Adding Behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/extensiondev/#configuration-techniques">Configuration Techniques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/extensiondev/#data-during-a-request">Data During a Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/extensiondev/#views-and-models">Views and Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/extensiondev/#recommended-extension-guidelines">Recommended Extension Guidelines</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/contributing/">How to contribute to Flask</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/contributing/#support-questions">Support questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/contributing/#reporting-issues">Reporting issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/contributing/#submitting-patches">Submitting patches</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/license/">BSD-3-Clause License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/">Changes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-3-0-3">Version 3.0.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-3-0-2">Version 3.0.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-3-0-1">Version 3.0.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-3-0-0">Version 3.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-2-3-3">Version 2.3.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-2-3-2">Version 2.3.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-2-3-1">Version 2.3.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-2-3-0">Version 2.3.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-2-2-5">Version 2.2.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-2-2-4">Version 2.2.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-2-2-3">Version 2.2.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-2-2-2">Version 2.2.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-2-2-1">Version 2.2.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-2-2-0">Version 2.2.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-2-1-3">Version 2.1.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-2-1-2">Version 2.1.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-2-1-1">Version 2.1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-2-1-0">Version 2.1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-2-0-3">Version 2.0.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-2-0-2">Version 2.0.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-2-0-1">Version 2.0.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-2-0-0">Version 2.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-1-1-4">Version 1.1.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-1-1-3">Version 1.1.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-1-1-2">Version 1.1.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-1-1-1">Version 1.1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-1-1-0">Version 1.1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-1-0-4">Version 1.0.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-1-0-3">Version 1.0.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-1-0-2">Version 1.0.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-1-0-1">Version 1.0.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-1-0">Version 1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-0-12-5">Version 0.12.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-0-12-4">Version 0.12.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-0-12-3">Version 0.12.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-0-12-2">Version 0.12.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-0-12-1">Version 0.12.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-0-12">Version 0.12</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-0-11-1">Version 0.11.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-0-11">Version 0.11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-0-10-1">Version 0.10.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-0-10">Version 0.10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-0-9">Version 0.9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-0-8-1">Version 0.8.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-0-8">Version 0.8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-0-7-2">Version 0.7.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-0-7-1">Version 0.7.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-0-7">Version 0.7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-0-6-1">Version 0.6.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-0-6">Version 0.6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-0-5-2">Version 0.5.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-0-5-1">Version 0.5.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-0-5">Version 0.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-0-4">Version 0.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-0-3-1">Version 0.3.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-0-3">Version 0.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-0-2">Version 0.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/changes/#version-0-1">Version 0.1</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+  <span id="sidebar-top"></span>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  
+
+  <h3>Project Links</h3>
+  <ul>
+    <li><a href="https://palletsprojects.com/donate">Donate</a>
+  
+    </li><li><a href="https://pypi.org/project/Flask/">PyPI Releases</a>
+  
+    </li><li><a href="https://github.com/pallets/flask/">Source Code</a>
+  
+    </li><li><a href="https://github.com/pallets/flask/issues/">Issue Tracker</a>
+  
+    </li><li><a href="https://discord.gg/pallets">Chat</a>
+  </li></ul>
+  <h3>Contents</h3>
+  <ul>
+<li><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/#">Welcome to Flask</a><ul>
+<li><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/#user-s-guide">User’s Guide</a></li>
+<li><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/#api-reference">API Reference</a></li>
+<li><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/#additional-notes">Additional Notes</a></li>
+</ul>
+</li>
+</ul>
+
+<search id="searchbox" style="display: block;" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="https://flask.palletsprojects.com/en/3.0.x/search/" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+      <input type="submit" value="Go">
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><div id="ethical-ad-placement" data-ea-type="readthedocs-sidebar" data-ea-manual="true" data-ea-publisher="readthedocs-pallets" data-ea-keywords="flask|jinja|python|readthedocs-project-96|readthedocs-project-flask|web-framework|werkzeug|wsgi" data-ea-campaign-types="community|house|paid" class="loaded"><div class="ethical-sidebar"><div class="ethical-content"><a href="https://server.ethicalads.io/proxy/click/7787/0fe39541-770d-408d-a1d6-4566d5f0f14d/" rel="nofollow noopener sponsored" target="_blank" class="ethical-image-link"><img src="./Welcome to Flask — Flask Documentation (3.0.x)_files/cropped_wpzNdDu.png" alt="Sponsored: Tiny Fish"></a><div class="ethical-text"><a href="https://server.ethicalads.io/proxy/click/7787/0fe39541-770d-408d-a1d6-4566d5f0f14d/" rel="nofollow noopener sponsored" target="_blank"><strong class="ea-headline">AgentQL: </strong><span class="ea-body">turn any website into structured data.</span><strong class="ea-cta"> Try in Playground.</strong></a></div></div><div class="ethical-callout"><small><em><a rel="nofollow noopener" target="_blank" href="https://www.ethicalads.io/?ref=rtd-sidebar">Ad by EthicalAds</a></em></small><span> &nbsp; · &nbsp; </span><a rel="nofollow noopener" target="_blank" href="https://www.ethicalads.io/advertisers/topics/backend-web/?ref=rtd-sidebar-buy-ads">ℹ️</a></div></div><img src="./Welcome to Flask — Flask Documentation (3.0.x)_files/saved_resource(1)" class="ea-pixel"><img src="./Welcome to Flask — Flask Documentation (3.0.x)_files/saved_resource(2)" class="ea-pixel"></div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  
+    <div class="footer" role="contentinfo">
+    © Copyright 2010 Pallets.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    </div>
+  <script src="./Welcome to Flask — Flask Documentation (3.0.x)_files/version_warning_offset.js.download"></script>
+
+  
+<readthedocs-flyout><template shadowrootmode="open"><!---->
+      <div class=" floating container bottom-right ">
+        <!--?lit$169445837$-->
+      <header>
+        <img class="logo" alt="Read the Docs" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJzdmciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSI2OTQgMTk3IDIwMDAgNDAwIj4KPGcgaWQ9ImxvZ28iIHRyYW5zZm9ybT0ibWF0cml4KDAuNTU3NTM2NDQsMCwwLDAuNTU3NTM2NDQsNjguMzA4MTM1LDEwNTAuMTI2MikiPgoJPHBhdGggc3R5bGU9ImZpbGw6I2ZjZmNmYyIgZD0iTTE0MDguMS0xMTgxLjdjLTcuNSwxLTEyLjcsNy44LTExLjcsMTUuMyAgIGMwLjcsNS40LDQuNiw5LjksOS45LDExLjNjMCwwLDMzLjIsMTEsODkuNywxNS42YzQ1LjQsMy43LDk2LjktMy4yLDk2LjktMy4yYzcuNS0wLjIsMTMuNS02LjUsMTMuMi0xNHMtNi41LTEzLjUtMTQtMTMuMiAgIGMtMC45LDAtMS44LDAuMS0yLjYsMC4zYzAsMC01MC40LDYuMi05MS4zLDIuOWMtNTQtNC40LTgzLjQtMTQuMy04My40LTE0LjNDMTQxMi42LTExODEuNywxNDEwLjMtMTE4MiwxNDA4LjEtMTE4MS43eiAgICBNMTQwOC4xLTEyNDkuM2MtNy41LDEtMTIuNyw3LjgtMTEuNywxNS4zYzAuNyw1LjQsNC42LDkuOSw5LjksMTEuM2MwLDAsMzMuMiwxMSw4OS43LDE1LjZjNDUuNCwzLjcsOTYuOS0zLjIsOTYuOS0zLjIgICBjNy41LTAuMiwxMy41LTYuNSwxMy4yLTE0cy02LjUtMTMuNS0xNC0xMy4yYy0wLjksMC0xLjgsMC4xLTIuNiwwLjNjMCwwLTUwLjQsNi4yLTkxLjMsMi45Yy01NC00LjQtODMuNC0xNC4zLTgzLjQtMTQuMyAgIEMxNDEyLjYtMTI0OS4zLDE0MTAuMy0xMjQ5LjYsMTQwOC4xLTEyNDkuM3ogTTE0MDguMS0xMzE2LjljLTcuNSwxLTEyLjcsNy44LTExLjcsMTUuM2MwLjcsNS40LDQuNiw5LjksOS45LDExLjMgICBjMCwwLDMzLjIsMTEsODkuNywxNS42YzQ1LjQsMy43LDk2LjktMy4yLDk2LjktMy4yYzcuNS0wLjIsMTMuNS02LjUsMTMuMi0xNHMtNi41LTEzLjUtMTQtMTMuMmMtMC45LDAtMS44LDAuMS0yLjYsMC4zICAgYzAsMC01MC40LDYuMi05MS4zLDIuOWMtNTQtNC40LTgzLjQtMTQuMy04My40LTE0LjNDMTQxMi42LTEzMTYuOSwxNDEwLjMtMTMxNy4yLDE0MDguMS0xMzE2Ljl6IE0xNDA4LjEtMTM4NC40ICAgYy03LjUsMS0xMi43LDcuOC0xMS43LDE1LjNjMC43LDUuNCw0LjYsOS45LDkuOSwxMS4zYzAsMCwzMy4yLDExLDg5LjcsMTUuNmM0NS40LDMuNyw5Ni45LTMuMiw5Ni45LTMuMmM3LjUtMC4yLDEzLjUtNi41LDEzLjItMTQgICBzLTYuNS0xMy41LTE0LTEzLjJjLTAuOSwwLTEuOCwwLjEtMi42LDAuM2MwLDAtNTAuNCw2LjItOTEuMywyLjljLTU0LTQuNC04My40LTE0LjMtODMuNC0xNC4zICAgQzE0MTIuNi0xMzg0LjUsMTQxMC4zLTEzODQuNywxNDA4LjEtMTM4NC40eiBNMTMxMy40LTE0NTUuN2MtNzEsMC41LTk3LjUsMjIuMy05Ny41LDIyLjN2NTMwLjNjMCwwLDI1LjgtMjIuMywxMDktMTguOSAgIGM4My4yLDMuNCwxMDAuMywzMi42LDIwMi41LDM0LjZjMTAyLjIsMi4xLDEyNy45LTE1LjcsMTI3LjktMTUuN2wxLjUtNTQwLjZjMCwwLTQ2LDEzLTEzNS41LDEzLjdzLTExMS0yMi44LTE5My4yLTI1LjUgICBDMTMyMy0xNDU1LjYsMTMxOC4xLTE0NTUuNywxMzEzLjQtMTQ1NS43eiBNMTM3Mi44LTE0MjEuMWMwLDAsNDMsMTQuMiwxMjIuNSwxOC4yYzY3LjIsMy4zLDEzNC41LTYuNiwxMzQuNS02LjZ2NDgwLjUgICBjMCwwLTM0LjEsMTcuOS0xMTkuMywxMS44Yy02Ni00LjctMTM4LjctMjkuNy0xMzguNy0yOS43TDEzNzIuOC0xNDIxLjF6IE0xMzMxLjMtMTQwOC42YzcuNiwwLDEzLjcsNi4yLDEzLjcsMTMuNyAgIHMtNi4yLDEzLjctMTMuNywxMy43YzAsMC0yMi4zLDAuMS0zNS44LDEuNWMtMjIuOCwyLjMtMzguMywxMC42LTM4LjMsMTAuNmMtNi43LDMuNS0xNSwxLTE4LjUtNS43cy0xLTE1LDUuNy0xOC41YzAsMCwwLDAsMCwwICAgYzAsMCwyMC4yLTEwLjcsNDguNC0xMy41QzEzMDkuMS0xNDA4LjUsMTMzMS4zLTE0MDguNiwxMzMxLjMtMTQwOC42eiBNMTMxOC4xLTEzNDAuOGM3LjYtMC4yLDEzLjMsMCwxMy4zLDAgICBjNy41LDAuOSwxMi45LDcuOCwxMiwxNS4zYy0wLjgsNi4zLTUuNywxMS4yLTEyLDEyYzAsMC0yMi4zLDAuMS0zNS44LDEuNWMtMjIuOCwyLjMtMzguMywxMC42LTM4LjMsMTAuNmMtNi43LDMuNS0xNSwwLjktMTguNS01LjggICBjLTMuNS02LjctMC45LTE1LDUuOC0xOC41YzAsMCwyMC4yLTEwLjcsNDguNC0xMy41QzEzMDAuOS0xMzQwLjEsMTMxMC41LTEzNDAuNiwxMzE4LjEtMTM0MC44eiBNMTMzMS4zLTEyNzMuMyAgIGM3LjYsMCwxMy43LDYuMiwxMy43LDEzLjdjMCw3LjYtNi4yLDEzLjctMTMuNywxMy43YzAsMC0yMi4zLTAuMS0zNS44LDEuMmMtMjIuOCwyLjMtMzguMywxMC42LTM4LjMsMTAuNiAgIGMtNi43LDMuNS0xNSwwLjktMTguNS01LjhjLTMuNS02LjctMC45LTE1LDUuOC0xOC41YzAsMCwyMC4yLTEwLjcsNDguNC0xMy41QzEzMDkuMS0xMjczLjQsMTMzMS4zLTEyNzMuMywxMzMxLjMtMTI3My4zeiIvPgo8L2c+CjxnIGlkPSJ0ZXh0Ij4KCTxwYXRoIHN0eWxlPSJmaWxsOiNmY2ZjZmMiIGQ9Ik0xMTI4LjYsNDkxLjlWNDcwbDguOS0wLjhjNS4yLTAuNSw3LjgtMy4xLDcuOC03LjZWMzM2bC0xNS40LTAuOHYtMjNoNzMuOCAgIGMyMC45LDAsMzYuOSwzLjksNDguMSwxMS42YzExLjIsNy43LDE2LjgsMjAuNSwxNi44LDM4LjFjMCwxMi4zLTMuMiwyMi4zLTkuNywzMC4zYy02LjMsNy45LTEzLjksMTMuNy0yMi43LDE3LjMgICBjNi41LDIuMywxMS42LDcuOCwxNS40LDE2LjVsMTkuNSw0Mi40bDE1LjQsMC41djIzaC02Ni44VjQ3MGw3LjgtMC44YzQuMS0wLjUsNi4yLTIuMiw2LjItNC45YzAtMS4xLTAuNC0yLjMtMS4xLTMuOGwtMTIuNy0yNyAgIGMtMi00LjUtNC4yLTcuNy02LjgtOS41Yy0yLjMtMi01LjgtMy0xMC4zLTNoLTI0LjZ2NDdsMTcuNiwwLjh2MjNMMTEyOC42LDQ5MS45IE0xMTc4LjMsMzk1LjRoMjMuNWMyMi4yLDAsMzMuMi05LjksMzMuMi0yOS43ICAgYzAtMTEuNC0zLTE4LjctOC45LTIyLjJjLTUuOC0zLjQtMTUuMS01LjEtMjguMS01LjFoLTE5LjdWMzk1LjQiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNmY2ZjZmMiIGQ9Ik0xMzU2LDM1MS45YzEzLjUsMCwyNC4yLDMuMywzMi4yLDEwYzcuOSw2LjUsMTEuOSwxNS43LDExLjksMjcuNmMwLDcuOS0xLjcsMTUtNS4xLDIxLjEgICBjLTMuNCw1LjktNy43LDEwLjYtMTIuNywxNC4xYy01LDMuNC0xMS4yLDYuMi0xOC40LDguNGMtMTIuMSwzLjYtMjUuNyw1LjQtNDAuOCw1LjRjMC41LDkuNSwzLjUsMTcuMyw4LjksMjMuMiAgIGM1LjQsNS44LDEzLjcsOC42LDI0LjksOC42YzExLjIsMCwyMi4zLTQsMzMuNS0xMS45bDEwLjMsMjEuOWMtMy42LDMuMi05LjcsNi42LTE4LjQsMTBjLTguNSwzLjQtMTguMiw1LjEtMjkuMiw1LjEgICBjLTIyLDAtMzguMS02LTQ4LjQtMTguMWMtMTAuMy0xMi4zLTE1LjQtMjktMTUuNC01MC4zYzAtMjEuMyw1LjktMzkuMSwxNy42LTUzLjVDMTMxOC41LDM1OS4xLDEzMzQuOSwzNTEuOSwxMzU2LDM1MS45ICAgIE0xMzQzLjYsNDEzLjhjNi43LTEuMywxMi44LTMuOSwxOC40LTcuOGM1LjYtNC4xLDguNC05LDguNC0xNC42YzAtMTEtNS40LTE2LjUtMTYuMi0xNi41Yy0xMC4xLDAtMTcuOCw0LjEtMjMuMiwxMi4yICAgYy01LjQsNy45LTguNCwxNy41LTguOSwyOC42QzEzMjkuOSw0MTUuNSwxMzM3LjEsNDE0LjksMTM0My42LDQxMy44Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojZmNmY2ZjIiBkPSJNMTUyOS42LDM2MS40djEwMC41YzAsMi45LDAuNSw0LjksMS40LDUuOWMxLjEsMS4xLDIuOSwxLjcsNS40LDEuOWw4LjYsMC41djIxLjZoLTQzdi0xNS43ICAgbC0wLjgtMC4zYy05LDEzLTIxLjQsMTkuNS0zNywxOS41Yy0xOC40LDAtMzItNS45LTQwLjgtMTcuNmMtOC44LTExLjctMTMuMi0yNy43LTEzLjItNDguMWMwLTI0LjUsNS45LTQzLjYsMTcuOC01Ny4zICAgYzExLjktMTMuNywyOS43LTIwLjUsNTMuNS0yMC41QzE0OTYuOCwzNTEuOSwxNTEyLjksMzU1LjEsMTUyOS42LDM2MS40IE0xNDk4LjMsNDQ4Ljl2LTcwYy01LTIuMy0xMi0zLjUtMjAuOC0zLjUgICBjLTEyLjEsMC0yMC44LDQuOS0yNi4yLDE0LjZjLTUuNCw5LjctOC4xLDIyLjYtOC4xLDM4LjdjMCwyOS4yLDkuNCw0My44LDI4LjEsNDMuOGM3LjksMCwxNC40LTIuMywxOS41LTcgICBDMTQ5NS43LDQ2MC42LDE0OTguMyw0NTUuMSwxNDk4LjMsNDQ4LjkiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNmY2ZjZmMiIGQ9Ik0xNjE2LjMsMzUxLjljNy43LDAsMTUuMSwxLjEsMjIuMiwzLjJ2LTI3LjNjMC00LTIuMy02LjEtNy02LjVsLTExLjYtMC44di0yMS40aDUwLjN2MTY0LjMgICBjMC4yLDQuMSwyLjQsNi4yLDYuOCw2LjJsOS41LDAuNXYyMS42aC00My44VjQ3NmwtMC44LTAuM2MtOC4xLDEzLjItMjAuNCwxOS43LTM2LjgsMTkuN2MtMjAuNSwwLTM1LTYuOC00My4yLTIwLjUgICBjLTcuNi0xMi40LTExLjQtMjcuNy0xMS40LTQ1LjdjMC0yMy40LDUuOC00Mi4yLDE3LjMtNTYuMkMxNTc5LjMsMzU4LjksMTU5NS41LDM1MS45LDE2MTYuMywzNTEuOSBNMTYzOC40LDQ0OS44di03MCAgIGMtNi41LTIuOS0xMy4zLTQuMy0yMC41LTQuM2MtMTEuOSwwLTIwLjYsNC44LTI2LjIsMTQuM2MtNS40LDkuNi04LjEsMjEuNy04LjEsMzYuNWMwLDMwLjMsOS43LDQ1LjQsMjkuMiw0NS40ICAgYzcuNCwwLDEzLjUtMi4xLDE4LjQtNi4yQzE2MzYsNDYxLjEsMTYzOC40LDQ1NS45LDE2MzguNCw0NDkuOCIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I2ZjZmNmYyIgZD0iTTE3OTEuNyw0NzAuNmMwLDAtMTIuNSw0LjctMTkuMiw0LjdzLTkuMi0zLjMtOS4yLTExLjhjMC0zLjgsMC41LTguOCwxLjQtMTQuOWwxMC4yLTYzLjFoMzIuNiAgIGwyLjgtMTcuN2gtMzIuNmw1LjctMzQuNUwxNzYwLDMzOGwtNC43LDI5LjhsLTIzLjYsMi40bC0yLjYsMTUuNGgyMy40TDE3NDIsNDUxYy0wLjksNS40LTEuNCwxMC42LTEuNCwxNS4xICAgYzAsMTguNyw3LjgsMjguMSwyMy45LDI4LjFjMTMuMiwwLDMxLTEwLjksMzEtMTAuOUwxNzkxLjcsNDcwLjYiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNmY2ZjZmMiIGQ9Ik0xODY1LDMwOS44bC00My4zLDEuMmwtMi4xLDEzbDE5LjksNC43bC0yNiwxNjMuMmgyMi41bDcuOC00Mi42YzAsMCwxOC43LTY1LDQ5LjQtNjUgICBjOS41LDAsMTIuMyw2LjksMTIuMywxNS42YzAsMy4zLTAuNSw2LjktMC45LDEwLjRsLTEzLjUsODEuNmw0My4zLTIuNGwyLjEtMTNsLTE5LjktMy41bDEwLjYtNjYuMmMwLjctNSwxLjItOS43LDEuMi0xNCAgIGMwLTE3LTYuOS0yOC42LTI1LjgtMjguNmMtMzUuOSwwLTU0LjksNDUuNi01NS44LDQ4LjJMMTg2NSwzMDkuOCIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I2ZjZmNmYyIgZD0iTTIwMzUsNDY0LjdjMCwwLTIxLjUsMTAuNi0zOC44LDEwLjZjLTE3LjcsMC0yNi03LjgtMjYtMjQuNmMwLTMuMSwwLjItNi42LDAuNy0xMC4yICAgYzQ5LDAsODMtMTguNCw4My00NS42YzAtMTguNy0xNS4xLTMwLjctMzktMzAuN2MtMzcuNiwwLTY4LjMsMzguNS02OC4zLDg3LjVjMCwyNiwxNi42LDQyLjYsNDIuNiw0Mi42YzI3LjksMCw1My0xNy41LDUzLTE3LjUgICBMMjAzNSw0NjQuNyBNMTk3Myw0MjRjNi4xLTI0LjgsMjMuNC00Mi4xLDQwLjctNDIuMWMxMi4xLDAsMTcuNyw1LDE3LjcsMTUuNEMyMDMxLjUsNDEyLjksMjAwNi42LDQyNCwxOTczLDQyNCIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I2ZjZmNmYyIgZD0iTTIwOTMuNyw0OTEuOVY0NzBsOC45LTAuOGM1LjItMC41LDcuOC0zLjEsNy44LTcuNlYzMzZsLTE1LjQtMC44di0yM2g3NC4xICAgYzI2LjUsMCw0Ny4xLDcsNjEuOSwyMS4xYzE1LDE0LjEsMjIuNCwzNC45LDIyLjQsNjIuNGMwLDE3LjEtMi4zLDMyLjEtNi44LDQ0LjljLTQuNSwxMi42LTEwLjYsMjIuNS0xOC40LDI5LjcgICBjLTE1LjUsMTQuNC0zNC44LDIxLjYtNTcuOCwyMS42TDIwOTMuNyw0OTEuOSBNMjE0My40LDMzOC40VjQ2NmgyNy42YzE1LjUsMCwyNy42LTUuNiwzNi4yLTE2LjhjOC42LTExLjIsMTMtMjcuNCwxMy00OC43ICAgYzAtNDEuNC0xNy42LTYyLjItNTIuNy02Mi4ySDIxNDMuNCIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I2ZjZmNmYyIgZD0iTTIzMzAsNDcyLjJjMTkuNiwwLDI5LjUtMTUuOSwyOS41LTQ3LjZjMC0xNi0yLjMtMjguMi02LjgtMzYuNWMtNC4zLTguMy0xMS43LTEyLjQtMjIuMi0xMi40ICAgYy0xMC4zLDAtMTcuOCw0LTIyLjcsMTEuOWMtNC45LDcuOS03LjMsMTguNy03LjMsMzIuNGMwLDI1LjQsNC43LDQxLjQsMTQuMSw0Ny44QzIzMTguOCw0NzAuNywyMzIzLjksNDcyLjIsMjMzMCw0NzIuMiAgICBNMjI2Ny45LDQyMy44YzAtMTMuMywyLTI0LjksNS45LTM0LjZjNC05LjksOS4zLTE3LjUsMTUuOS0yMi43YzEyLjgtOS43LDI2LjktMTQuNiw0Mi40LTE0LjZjMTAuOCwwLDE5LjksMS44LDI3LjMsNS40ICAgYzcuNiwzLjQsMTMuNCw3LjUsMTcuNiwxMi4yYzQuMyw0LjUsNy45LDExLjIsMTAuOCwyMGMzLjEsOC42LDQuNiwxOC45LDQuNiwzMC44YzAsMjQuOS02LDQzLjctMTguMSw1Ni41ICAgYy0xMi4xLDEyLjgtMjcuNiwxOS4yLTQ2LjUsMTkuMmMtMTguNywwLTMzLjQtNi00NC4xLTE4LjFDMjI3My4yLDQ2NS42LDIyNjcuOSw0NDcuNiwyMjY3LjksNDIzLjgiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNmY2ZjZmMiIGQ9Ik0yNDM4LjIsNDIyLjVjMCwxNS4zLDIuOSwyNy4yLDguNiwzNS43YzUuOCw4LjUsMTQuMSwxMi43LDI0LjksMTIuN2MxMSwwLDIxLjgtMy45LDMyLjQtMTEuNiAgIGwxMS42LDIwLjhjLTEyLjgsMTAuNS0yOC44LDE1LjctNDguMSwxNS43Yy0xOS4zLDAtMzQuNS02LTQ1LjctMTguMWMtMTEtMTIuMy0xNi41LTMwLjMtMTYuNS01NC4xczYuMy00MS42LDE4LjktNTMuNSAgIGMxMi44LTEyLjEsMjcuMS0xOC4xLDQzLTE4LjFjMTYsMCwzMC45LDMuNyw0NC42LDExLjF2MzUuMWwtMjQuOSwxLjl2LTEzYzAtNC45LTEuOC03LjgtNS40LTguOWMtMy40LTEuMy03LTEuOS0xMC44LTEuOSAgIEMyNDQ5LjEsMzc2LjIsMjQzOC4yLDM5MS42LDI0MzguMiw0MjIuNSIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I2ZjZmNmYyIgZD0iTTI1OTIuOSwzNzYuNWMtNC4zLTEuNi05LjYtMi40LTE1LjctMi40Yy02LjEsMC0xMS4xLDEuNC0xNC45LDQuM2MtMy42LDIuNy01LjQsNi4xLTUuNCwxMC4zICAgYzAsNCwwLjYsNy4xLDEuOSw5LjVjMS40LDIuMiwzLjYsNC4xLDYuNSw1LjdjNC41LDIuMyw5LjksNC40LDE2LjIsNi4yYzYuMywxLjYsMTEsMywxNC4xLDQuMWMzLjEsMC45LDYuOCwyLjUsMTEuNCw0LjkgICBjNC43LDIuMyw4LjIsNC45LDEwLjUsNy42YzYuMyw2LjcsOS41LDE1LjIsOS41LDI1LjdjMCwxMy41LTUsMjQuMS0xNC45LDMxLjljLTkuNyw3LjYtMjIuMiwxMS40LTM3LjMsMTEuNCAgIGMtMjIsMC0zOC42LTIuOC00OS43LTguNHYtMzcuNmwyNC4zLTEuOXYxM2MwLDcuOSw3LjYsMTEuOSwyMi43LDExLjlzMjIuNy01LjUsMjIuNy0xNi41YzAtNC0xLjQtNy4yLTQuMS05LjcgICBjLTIuNS0yLjUtNS00LjItNy42LTUuMWMtMi41LTAuOS01LjYtMS44LTkuMi0yLjdjLTMuNC0wLjktNi44LTEuOC0xMC4zLTIuN2MtMy4yLTAuOS02LjgtMi4xLTEwLjgtMy41Yy0zLjgtMS42LTgtMy45LTEyLjctNi44ICAgYy05LjItNS45LTEzLjgtMTUuOS0xMy44LTI5LjdjMC0xNC4xLDUtMjQuOSwxNC45LTMyLjRjOS45LTcuNiwyMi4zLTExLjQsMzcuMy0xMS40YzE1LjEsMCwzMC4xLDMuNiw0NC45LDEwLjh2MzIuNGwtMjQuMywxLjkgICB2LTExLjRDMjU5OS4xLDM4MS4yLDI1OTcsMzc4LjEsMjU5Mi45LDM3Ni41Ii8+CjwvZz4KPGRpdiB4bWxucz0iIiBpZD0ic2FrYS1ndWktcm9vdCI+PGRpdj48ZGl2PjxzdHlsZS8+PC9kaXY+PC9kaXY+PC9kaXY+PC9zdmc+Cg==">
+        <!--?lit$169445837$--><span><!--?lit$169445837$--><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="code-branch" class="svg-inline--fa fa-code-branch icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M80 104a24 24 0 1 0 0-48 24 24 0 1 0 0 48zm80-24c0 32.8-19.7 61-48 73.3l0 87.8c18.8-10.9 40.7-17.1 64-17.1l96 0c35.3 0 64-28.7 64-64l0-6.7C307.7 141 288 112.8 288 80c0-44.2 35.8-80 80-80s80 35.8 80 80c0 32.8-19.7 61-48 73.3l0 6.7c0 70.7-57.3 128-128 128l-96 0c-35.3 0-64 28.7-64 64l0 6.7c28.3 12.3 48 40.5 48 73.3c0 44.2-35.8 80-80 80s-80-35.8-80-80c0-32.8 19.7-61 48-73.3l0-6.7 0-198.7C19.7 141 0 112.8 0 80C0 35.8 35.8 0 80 0s80 35.8 80 80zm232 0a24 24 0 1 0 -48 0 24 24 0 1 0 48 0zM80 456a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"></path></svg> <!--?lit$169445837$-->3.0.x</span>
+      </header>
+    
+        <main class=" closed ">
+          <!--?lit$169445837$-->
+      <dl class="languages">
+        <dt>Languages</dt>
+        <!--?lit$169445837$--><!----><dd><!--?lit$169445837$--><strong><!--?lit$169445837$--><a href="https://flask.palletsprojects.com/en/3.0.x/"><!--?lit$169445837$-->en</a></strong></dd><!----><!----><dd><!--?lit$169445837$--><a href="https://flask.palletsprojects.com/es/3.0.x/"><!--?lit$169445837$-->es</a></dd><!----><!----><dd><!--?lit$169445837$--><a href="https://flask.palletsprojects.com/fa/3.0.x/"><!--?lit$169445837$-->fa</a></dd><!----><!----><dd><!--?lit$169445837$--><a href="https://flask.palletsprojects.com/ko/3.0.x/"><!--?lit$169445837$-->ko</a></dd><!----><!----><dd><!--?lit$169445837$--><a href="https://flask.palletsprojects.com/zh-cn/3.0.x/"><!--?lit$169445837$-->zh-cn</a></dd><!---->
+      </dl>
+     <!--?lit$169445837$-->
+      <dl class="versions">
+        <dt>Versions</dt>
+        <!--?lit$169445837$--><!----><dd><!--?lit$169445837$--><a href="https://flask.palletsprojects.com/en/1.1.x/"><!--?lit$169445837$-->1.1.x</a></dd><!----><!----><dd><!--?lit$169445837$--><a href="https://flask.palletsprojects.com/en/2.0.x/"><!--?lit$169445837$-->2.0.x</a></dd><!----><!----><dd><!--?lit$169445837$--><a href="https://flask.palletsprojects.com/en/2.1.x/"><!--?lit$169445837$-->2.1.x</a></dd><!----><!----><dd><!--?lit$169445837$--><a href="https://flask.palletsprojects.com/en/2.2.x/"><!--?lit$169445837$-->2.2.x</a></dd><!----><!----><dd><!--?lit$169445837$--><a href="https://flask.palletsprojects.com/en/2.3.x/"><!--?lit$169445837$-->2.3.x</a></dd><!----><!----><dd><!--?lit$169445837$--><strong><!--?lit$169445837$--><a href="https://flask.palletsprojects.com/en/3.0.x/"><!--?lit$169445837$-->3.0.x</a></strong></dd><!----><!----><dd><!--?lit$169445837$--><a href="https://flask.palletsprojects.com/en/latest/"><!--?lit$169445837$-->latest</a></dd><!---->
+      </dl>
+    
+          <!--?lit$169445837$--> <!--?lit$169445837$-->
+      <dl>
+        <dt>On Read the Docs</dt>
+        <dd>
+          <a href="https://app.readthedocs.org/projects/flask/?utm_source=flask&amp;utm_content=flyout">Project Home</a>
+        </dd>
+        <dd>
+          <a href="https://app.readthedocs.org/projects/flask/builds/?utm_source=flask&amp;utm_content=flyout">Builds</a>
+        </dd>
+      </dl>
+    
+          <!--?lit$169445837$--> <!--?lit$169445837$-->
+        <dl>
+          <dt>Search</dt>
+          <dd>
+            <form id="flyout-search-form">
+              <input type="text" name="q" aria-label="Search docs" placeholder="Search docs">
+            </form>
+          </dd>
+        </dl>
+      
+          <hr>
+          <!--?lit$169445837$-->
+      <small>
+        <span>
+          <a href="https://docs.readthedocs.io/page/addons.html?utm_source=flask&amp;utm_content=flyout">Addons documentation</a></span>
+        <span> ― </span>
+        <span>Hosted by
+          <a href="https://about.readthedocs.com/?utm_source=flask&amp;utm_content=flyout">Read the Docs</a></span>
+      </small>
+    
+        </main>
+      </div>
+    </template></readthedocs-flyout><readthedocs-notification class="raised toast"><template shadowrootmode="open"><!----></template></readthedocs-notification><readthedocs-search class="raised floating"><template shadowrootmode="open"><!---->
+      <div role="search" hidden="">
+        <div class="background"></div>
+        <div class="content">
+          <form class="  ">
+            <label><!--?lit$169445837$--><svg aria-labelledby="svg-inline--fa-title-Y0vbX1HDZVxP" data-prefix="fas" data-icon="magnifying-glass" class="svg-inline--fa fa-magnifying-glass" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><title id="svg-inline--fa-title-Y0vbX1HDZVxP">Search docs</title><path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg></label>
+            <input placeholder="Search docs" type="search" autocomplete="off">
+          </form>
+          <!--?lit$169445837$-->
+          <div class="results">
+            <!--?lit$169445837$--><p>No recent searches</p>
+          </div>
+          <div class="footer">
+            <ul class="help">
+              <li><code>Enter</code> to select</li>
+              <li><code>Up</code>/<code>Down</code> to navigate</li>
+              <li><code>Esc</code> to close</li>
+            </ul>
+            <div class="credits">
+              Search powered by
+              <a href="https://about.readthedocs.com/?utm_source=flask&amp;utm_content=search">
+                <img alt="Read the Docs" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJzdmciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSI2OTQgMTk3IDIwMDAgNDAwIj4KPGcgaWQ9ImxvZ28iIHRyYW5zZm9ybT0ibWF0cml4KDAuNTU3NTM2NDQsMCwwLDAuNTU3NTM2NDQsNjguMzA4MTM1LDEwNTAuMTI2MikiPgoJPHBhdGggc3R5bGU9ImZpbGw6IzMyMzIyQSIgZD0iTTE0MDguMS0xMTgxLjdjLTcuNSwxLTEyLjcsNy44LTExLjcsMTUuMyAgIGMwLjcsNS40LDQuNiw5LjksOS45LDExLjNjMCwwLDMzLjIsMTEsODkuNywxNS42YzQ1LjQsMy43LDk2LjktMy4yLDk2LjktMy4yYzcuNS0wLjIsMTMuNS02LjUsMTMuMi0xNHMtNi41LTEzLjUtMTQtMTMuMiAgIGMtMC45LDAtMS44LDAuMS0yLjYsMC4zYzAsMC01MC40LDYuMi05MS4zLDIuOWMtNTQtNC40LTgzLjQtMTQuMy04My40LTE0LjNDMTQxMi42LTExODEuNywxNDEwLjMtMTE4MiwxNDA4LjEtMTE4MS43eiAgICBNMTQwOC4xLTEyNDkuM2MtNy41LDEtMTIuNyw3LjgtMTEuNywxNS4zYzAuNyw1LjQsNC42LDkuOSw5LjksMTEuM2MwLDAsMzMuMiwxMSw4OS43LDE1LjZjNDUuNCwzLjcsOTYuOS0zLjIsOTYuOS0zLjIgICBjNy41LTAuMiwxMy41LTYuNSwxMy4yLTE0cy02LjUtMTMuNS0xNC0xMy4yYy0wLjksMC0xLjgsMC4xLTIuNiwwLjNjMCwwLTUwLjQsNi4yLTkxLjMsMi45Yy01NC00LjQtODMuNC0xNC4zLTgzLjQtMTQuMyAgIEMxNDEyLjYtMTI0OS4zLDE0MTAuMy0xMjQ5LjYsMTQwOC4xLTEyNDkuM3ogTTE0MDguMS0xMzE2LjljLTcuNSwxLTEyLjcsNy44LTExLjcsMTUuM2MwLjcsNS40LDQuNiw5LjksOS45LDExLjMgICBjMCwwLDMzLjIsMTEsODkuNywxNS42YzQ1LjQsMy43LDk2LjktMy4yLDk2LjktMy4yYzcuNS0wLjIsMTMuNS02LjUsMTMuMi0xNHMtNi41LTEzLjUtMTQtMTMuMmMtMC45LDAtMS44LDAuMS0yLjYsMC4zICAgYzAsMC01MC40LDYuMi05MS4zLDIuOWMtNTQtNC40LTgzLjQtMTQuMy04My40LTE0LjNDMTQxMi42LTEzMTYuOSwxNDEwLjMtMTMxNy4yLDE0MDguMS0xMzE2Ljl6IE0xNDA4LjEtMTM4NC40ICAgYy03LjUsMS0xMi43LDcuOC0xMS43LDE1LjNjMC43LDUuNCw0LjYsOS45LDkuOSwxMS4zYzAsMCwzMy4yLDExLDg5LjcsMTUuNmM0NS40LDMuNyw5Ni45LTMuMiw5Ni45LTMuMmM3LjUtMC4yLDEzLjUtNi41LDEzLjItMTQgICBzLTYuNS0xMy41LTE0LTEzLjJjLTAuOSwwLTEuOCwwLjEtMi42LDAuM2MwLDAtNTAuNCw2LjItOTEuMywyLjljLTU0LTQuNC04My40LTE0LjMtODMuNC0xNC4zICAgQzE0MTIuNi0xMzg0LjUsMTQxMC4zLTEzODQuNywxNDA4LjEtMTM4NC40eiBNMTMxMy40LTE0NTUuN2MtNzEsMC41LTk3LjUsMjIuMy05Ny41LDIyLjN2NTMwLjNjMCwwLDI1LjgtMjIuMywxMDktMTguOSAgIGM4My4yLDMuNCwxMDAuMywzMi42LDIwMi41LDM0LjZjMTAyLjIsMi4xLDEyNy45LTE1LjcsMTI3LjktMTUuN2wxLjUtNTQwLjZjMCwwLTQ2LDEzLTEzNS41LDEzLjdzLTExMS0yMi44LTE5My4yLTI1LjUgICBDMTMyMy0xNDU1LjYsMTMxOC4xLTE0NTUuNywxMzEzLjQtMTQ1NS43eiBNMTM3Mi44LTE0MjEuMWMwLDAsNDMsMTQuMiwxMjIuNSwxOC4yYzY3LjIsMy4zLDEzNC41LTYuNiwxMzQuNS02LjZ2NDgwLjUgICBjMCwwLTM0LjEsMTcuOS0xMTkuMywxMS44Yy02Ni00LjctMTM4LjctMjkuNy0xMzguNy0yOS43TDEzNzIuOC0xNDIxLjF6IE0xMzMxLjMtMTQwOC42YzcuNiwwLDEzLjcsNi4yLDEzLjcsMTMuNyAgIHMtNi4yLDEzLjctMTMuNywxMy43YzAsMC0yMi4zLDAuMS0zNS44LDEuNWMtMjIuOCwyLjMtMzguMywxMC42LTM4LjMsMTAuNmMtNi43LDMuNS0xNSwxLTE4LjUtNS43cy0xLTE1LDUuNy0xOC41YzAsMCwwLDAsMCwwICAgYzAsMCwyMC4yLTEwLjcsNDguNC0xMy41QzEzMDkuMS0xNDA4LjUsMTMzMS4zLTE0MDguNiwxMzMxLjMtMTQwOC42eiBNMTMxOC4xLTEzNDAuOGM3LjYtMC4yLDEzLjMsMCwxMy4zLDAgICBjNy41LDAuOSwxMi45LDcuOCwxMiwxNS4zYy0wLjgsNi4zLTUuNywxMS4yLTEyLDEyYzAsMC0yMi4zLDAuMS0zNS44LDEuNWMtMjIuOCwyLjMtMzguMywxMC42LTM4LjMsMTAuNmMtNi43LDMuNS0xNSwwLjktMTguNS01LjggICBjLTMuNS02LjctMC45LTE1LDUuOC0xOC41YzAsMCwyMC4yLTEwLjcsNDguNC0xMy41QzEzMDAuOS0xMzQwLjEsMTMxMC41LTEzNDAuNiwxMzE4LjEtMTM0MC44eiBNMTMzMS4zLTEyNzMuMyAgIGM3LjYsMCwxMy43LDYuMiwxMy43LDEzLjdjMCw3LjYtNi4yLDEzLjctMTMuNywxMy43YzAsMC0yMi4zLTAuMS0zNS44LDEuMmMtMjIuOCwyLjMtMzguMywxMC42LTM4LjMsMTAuNiAgIGMtNi43LDMuNS0xNSwwLjktMTguNS01LjhjLTMuNS02LjctMC45LTE1LDUuOC0xOC41YzAsMCwyMC4yLTEwLjcsNDguNC0xMy41QzEzMDkuMS0xMjczLjQsMTMzMS4zLTEyNzMuMywxMzMxLjMtMTI3My4zeiIvPgo8L2c+CjxnIGlkPSJ0ZXh0Ij4KCTxwYXRoIHN0eWxlPSJmaWxsOiMzMjMyMkEiIGQ9Ik0xMTI4LjYsNDkxLjlWNDcwbDguOS0wLjhjNS4yLTAuNSw3LjgtMy4xLDcuOC03LjZWMzM2bC0xNS40LTAuOHYtMjNoNzMuOCAgIGMyMC45LDAsMzYuOSwzLjksNDguMSwxMS42YzExLjIsNy43LDE2LjgsMjAuNSwxNi44LDM4LjFjMCwxMi4zLTMuMiwyMi4zLTkuNywzMC4zYy02LjMsNy45LTEzLjksMTMuNy0yMi43LDE3LjMgICBjNi41LDIuMywxMS42LDcuOCwxNS40LDE2LjVsMTkuNSw0Mi40bDE1LjQsMC41djIzaC02Ni44VjQ3MGw3LjgtMC44YzQuMS0wLjUsNi4yLTIuMiw2LjItNC45YzAtMS4xLTAuNC0yLjMtMS4xLTMuOGwtMTIuNy0yNyAgIGMtMi00LjUtNC4yLTcuNy02LjgtOS41Yy0yLjMtMi01LjgtMy0xMC4zLTNoLTI0LjZ2NDdsMTcuNiwwLjh2MjNMMTEyOC42LDQ5MS45IE0xMTc4LjMsMzk1LjRoMjMuNWMyMi4yLDAsMzMuMi05LjksMzMuMi0yOS43ICAgYzAtMTEuNC0zLTE4LjctOC45LTIyLjJjLTUuOC0zLjQtMTUuMS01LjEtMjguMS01LjFoLTE5LjdWMzk1LjQiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiMzMjMyMkEiIGQ9Ik0xMzU2LDM1MS45YzEzLjUsMCwyNC4yLDMuMywzMi4yLDEwYzcuOSw2LjUsMTEuOSwxNS43LDExLjksMjcuNmMwLDcuOS0xLjcsMTUtNS4xLDIxLjEgICBjLTMuNCw1LjktNy43LDEwLjYtMTIuNywxNC4xYy01LDMuNC0xMS4yLDYuMi0xOC40LDguNGMtMTIuMSwzLjYtMjUuNyw1LjQtNDAuOCw1LjRjMC41LDkuNSwzLjUsMTcuMyw4LjksMjMuMiAgIGM1LjQsNS44LDEzLjcsOC42LDI0LjksOC42YzExLjIsMCwyMi4zLTQsMzMuNS0xMS45bDEwLjMsMjEuOWMtMy42LDMuMi05LjcsNi42LTE4LjQsMTBjLTguNSwzLjQtMTguMiw1LjEtMjkuMiw1LjEgICBjLTIyLDAtMzguMS02LTQ4LjQtMTguMWMtMTAuMy0xMi4zLTE1LjQtMjktMTUuNC01MC4zYzAtMjEuMyw1LjktMzkuMSwxNy42LTUzLjVDMTMxOC41LDM1OS4xLDEzMzQuOSwzNTEuOSwxMzU2LDM1MS45ICAgIE0xMzQzLjYsNDEzLjhjNi43LTEuMywxMi44LTMuOSwxOC40LTcuOGM1LjYtNC4xLDguNC05LDguNC0xNC42YzAtMTEtNS40LTE2LjUtMTYuMi0xNi41Yy0xMC4xLDAtMTcuOCw0LjEtMjMuMiwxMi4yICAgYy01LjQsNy45LTguNCwxNy41LTguOSwyOC42QzEzMjkuOSw0MTUuNSwxMzM3LjEsNDE0LjksMTM0My42LDQxMy44Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojMzIzMjJBIiBkPSJNMTUyOS42LDM2MS40djEwMC41YzAsMi45LDAuNSw0LjksMS40LDUuOWMxLjEsMS4xLDIuOSwxLjcsNS40LDEuOWw4LjYsMC41djIxLjZoLTQzdi0xNS43ICAgbC0wLjgtMC4zYy05LDEzLTIxLjQsMTkuNS0zNywxOS41Yy0xOC40LDAtMzItNS45LTQwLjgtMTcuNmMtOC44LTExLjctMTMuMi0yNy43LTEzLjItNDguMWMwLTI0LjUsNS45LTQzLjYsMTcuOC01Ny4zICAgYzExLjktMTMuNywyOS43LTIwLjUsNTMuNS0yMC41QzE0OTYuOCwzNTEuOSwxNTEyLjksMzU1LjEsMTUyOS42LDM2MS40IE0xNDk4LjMsNDQ4Ljl2LTcwYy01LTIuMy0xMi0zLjUtMjAuOC0zLjUgICBjLTEyLjEsMC0yMC44LDQuOS0yNi4yLDE0LjZjLTUuNCw5LjctOC4xLDIyLjYtOC4xLDM4LjdjMCwyOS4yLDkuNCw0My44LDI4LjEsNDMuOGM3LjksMCwxNC40LTIuMywxOS41LTcgICBDMTQ5NS43LDQ2MC42LDE0OTguMyw0NTUuMSwxNDk4LjMsNDQ4LjkiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiMzMjMyMkEiIGQ9Ik0xNjE2LjMsMzUxLjljNy43LDAsMTUuMSwxLjEsMjIuMiwzLjJ2LTI3LjNjMC00LTIuMy02LjEtNy02LjVsLTExLjYtMC44di0yMS40aDUwLjN2MTY0LjMgICBjMC4yLDQuMSwyLjQsNi4yLDYuOCw2LjJsOS41LDAuNXYyMS42aC00My44VjQ3NmwtMC44LTAuM2MtOC4xLDEzLjItMjAuNCwxOS43LTM2LjgsMTkuN2MtMjAuNSwwLTM1LTYuOC00My4yLTIwLjUgICBjLTcuNi0xMi40LTExLjQtMjcuNy0xMS40LTQ1LjdjMC0yMy40LDUuOC00Mi4yLDE3LjMtNTYuMkMxNTc5LjMsMzU4LjksMTU5NS41LDM1MS45LDE2MTYuMywzNTEuOSBNMTYzOC40LDQ0OS44di03MCAgIGMtNi41LTIuOS0xMy4zLTQuMy0yMC41LTQuM2MtMTEuOSwwLTIwLjYsNC44LTI2LjIsMTQuM2MtNS40LDkuNi04LjEsMjEuNy04LjEsMzYuNWMwLDMwLjMsOS43LDQ1LjQsMjkuMiw0NS40ICAgYzcuNCwwLDEzLjUtMi4xLDE4LjQtNi4yQzE2MzYsNDYxLjEsMTYzOC40LDQ1NS45LDE2MzguNCw0NDkuOCIvPgoJPHBhdGggc3R5bGU9ImZpbGw6IzMyMzIyQSIgZD0iTTE3OTEuNyw0NzAuNmMwLDAtMTIuNSw0LjctMTkuMiw0LjdzLTkuMi0zLjMtOS4yLTExLjhjMC0zLjgsMC41LTguOCwxLjQtMTQuOWwxMC4yLTYzLjFoMzIuNiAgIGwyLjgtMTcuN2gtMzIuNmw1LjctMzQuNUwxNzYwLDMzOGwtNC43LDI5LjhsLTIzLjYsMi40bC0yLjYsMTUuNGgyMy40TDE3NDIsNDUxYy0wLjksNS40LTEuNCwxMC42LTEuNCwxNS4xICAgYzAsMTguNyw3LjgsMjguMSwyMy45LDI4LjFjMTMuMiwwLDMxLTEwLjksMzEtMTAuOUwxNzkxLjcsNDcwLjYiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiMzMjMyMkEiIGQ9Ik0xODY1LDMwOS44bC00My4zLDEuMmwtMi4xLDEzbDE5LjksNC43bC0yNiwxNjMuMmgyMi41bDcuOC00Mi42YzAsMCwxOC43LTY1LDQ5LjQtNjUgICBjOS41LDAsMTIuMyw2LjksMTIuMywxNS42YzAsMy4zLTAuNSw2LjktMC45LDEwLjRsLTEzLjUsODEuNmw0My4zLTIuNGwyLjEtMTNsLTE5LjktMy41bDEwLjYtNjYuMmMwLjctNSwxLjItOS43LDEuMi0xNCAgIGMwLTE3LTYuOS0yOC42LTI1LjgtMjguNmMtMzUuOSwwLTU0LjksNDUuNi01NS44LDQ4LjJMMTg2NSwzMDkuOCIvPgoJPHBhdGggc3R5bGU9ImZpbGw6IzMyMzIyQSIgZD0iTTIwMzUsNDY0LjdjMCwwLTIxLjUsMTAuNi0zOC44LDEwLjZjLTE3LjcsMC0yNi03LjgtMjYtMjQuNmMwLTMuMSwwLjItNi42LDAuNy0xMC4yICAgYzQ5LDAsODMtMTguNCw4My00NS42YzAtMTguNy0xNS4xLTMwLjctMzktMzAuN2MtMzcuNiwwLTY4LjMsMzguNS02OC4zLDg3LjVjMCwyNiwxNi42LDQyLjYsNDIuNiw0Mi42YzI3LjksMCw1My0xNy41LDUzLTE3LjUgICBMMjAzNSw0NjQuNyBNMTk3Myw0MjRjNi4xLTI0LjgsMjMuNC00Mi4xLDQwLjctNDIuMWMxMi4xLDAsMTcuNyw1LDE3LjcsMTUuNEMyMDMxLjUsNDEyLjksMjAwNi42LDQyNCwxOTczLDQyNCIvPgoJPHBhdGggc3R5bGU9ImZpbGw6IzMyMzIyQSIgZD0iTTIwOTMuNyw0OTEuOVY0NzBsOC45LTAuOGM1LjItMC41LDcuOC0zLjEsNy44LTcuNlYzMzZsLTE1LjQtMC44di0yM2g3NC4xICAgYzI2LjUsMCw0Ny4xLDcsNjEuOSwyMS4xYzE1LDE0LjEsMjIuNCwzNC45LDIyLjQsNjIuNGMwLDE3LjEtMi4zLDMyLjEtNi44LDQ0LjljLTQuNSwxMi42LTEwLjYsMjIuNS0xOC40LDI5LjcgICBjLTE1LjUsMTQuNC0zNC44LDIxLjYtNTcuOCwyMS42TDIwOTMuNyw0OTEuOSBNMjE0My40LDMzOC40VjQ2NmgyNy42YzE1LjUsMCwyNy42LTUuNiwzNi4yLTE2LjhjOC42LTExLjIsMTMtMjcuNCwxMy00OC43ICAgYzAtNDEuNC0xNy42LTYyLjItNTIuNy02Mi4ySDIxNDMuNCIvPgoJPHBhdGggc3R5bGU9ImZpbGw6IzMyMzIyQSIgZD0iTTIzMzAsNDcyLjJjMTkuNiwwLDI5LjUtMTUuOSwyOS41LTQ3LjZjMC0xNi0yLjMtMjguMi02LjgtMzYuNWMtNC4zLTguMy0xMS43LTEyLjQtMjIuMi0xMi40ICAgYy0xMC4zLDAtMTcuOCw0LTIyLjcsMTEuOWMtNC45LDcuOS03LjMsMTguNy03LjMsMzIuNGMwLDI1LjQsNC43LDQxLjQsMTQuMSw0Ny44QzIzMTguOCw0NzAuNywyMzIzLjksNDcyLjIsMjMzMCw0NzIuMiAgICBNMjI2Ny45LDQyMy44YzAtMTMuMywyLTI0LjksNS45LTM0LjZjNC05LjksOS4zLTE3LjUsMTUuOS0yMi43YzEyLjgtOS43LDI2LjktMTQuNiw0Mi40LTE0LjZjMTAuOCwwLDE5LjksMS44LDI3LjMsNS40ICAgYzcuNiwzLjQsMTMuNCw3LjUsMTcuNiwxMi4yYzQuMyw0LjUsNy45LDExLjIsMTAuOCwyMGMzLjEsOC42LDQuNiwxOC45LDQuNiwzMC44YzAsMjQuOS02LDQzLjctMTguMSw1Ni41ICAgYy0xMi4xLDEyLjgtMjcuNiwxOS4yLTQ2LjUsMTkuMmMtMTguNywwLTMzLjQtNi00NC4xLTE4LjFDMjI3My4yLDQ2NS42LDIyNjcuOSw0NDcuNiwyMjY3LjksNDIzLjgiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiMzMjMyMkEiIGQ9Ik0yNDM4LjIsNDIyLjVjMCwxNS4zLDIuOSwyNy4yLDguNiwzNS43YzUuOCw4LjUsMTQuMSwxMi43LDI0LjksMTIuN2MxMSwwLDIxLjgtMy45LDMyLjQtMTEuNiAgIGwxMS42LDIwLjhjLTEyLjgsMTAuNS0yOC44LDE1LjctNDguMSwxNS43Yy0xOS4zLDAtMzQuNS02LTQ1LjctMTguMWMtMTEtMTIuMy0xNi41LTMwLjMtMTYuNS01NC4xczYuMy00MS42LDE4LjktNTMuNSAgIGMxMi44LTEyLjEsMjcuMS0xOC4xLDQzLTE4LjFjMTYsMCwzMC45LDMuNyw0NC42LDExLjF2MzUuMWwtMjQuOSwxLjl2LTEzYzAtNC45LTEuOC03LjgtNS40LTguOWMtMy40LTEuMy03LTEuOS0xMC44LTEuOSAgIEMyNDQ5LjEsMzc2LjIsMjQzOC4yLDM5MS42LDI0MzguMiw0MjIuNSIvPgoJPHBhdGggc3R5bGU9ImZpbGw6IzMyMzIyQSIgZD0iTTI1OTIuOSwzNzYuNWMtNC4zLTEuNi05LjYtMi40LTE1LjctMi40Yy02LjEsMC0xMS4xLDEuNC0xNC45LDQuM2MtMy42LDIuNy01LjQsNi4xLTUuNCwxMC4zICAgYzAsNCwwLjYsNy4xLDEuOSw5LjVjMS40LDIuMiwzLjYsNC4xLDYuNSw1LjdjNC41LDIuMyw5LjksNC40LDE2LjIsNi4yYzYuMywxLjYsMTEsMywxNC4xLDQuMWMzLjEsMC45LDYuOCwyLjUsMTEuNCw0LjkgICBjNC43LDIuMyw4LjIsNC45LDEwLjUsNy42YzYuMyw2LjcsOS41LDE1LjIsOS41LDI1LjdjMCwxMy41LTUsMjQuMS0xNC45LDMxLjljLTkuNyw3LjYtMjIuMiwxMS40LTM3LjMsMTEuNCAgIGMtMjIsMC0zOC42LTIuOC00OS43LTguNHYtMzcuNmwyNC4zLTEuOXYxM2MwLDcuOSw3LjYsMTEuOSwyMi43LDExLjlzMjIuNy01LjUsMjIuNy0xNi41YzAtNC0xLjQtNy4yLTQuMS05LjcgICBjLTIuNS0yLjUtNS00LjItNy42LTUuMWMtMi41LTAuOS01LjYtMS44LTkuMi0yLjdjLTMuNC0wLjktNi44LTEuOC0xMC4zLTIuN2MtMy4yLTAuOS02LjgtMi4xLTEwLjgtMy41Yy0zLjgtMS42LTgtMy45LTEyLjctNi44ICAgYy05LjItNS45LTEzLjgtMTUuOS0xMy44LTI5LjdjMC0xNC4xLDUtMjQuOSwxNC45LTMyLjRjOS45LTcuNiwyMi4zLTExLjQsMzcuMy0xMS40YzE1LjEsMCwzMC4xLDMuNiw0NC45LDEwLjh2MzIuNGwtMjQuMywxLjkgICB2LTExLjRDMjU5OS4xLDM4MS4yLDI1OTcsMzc4LjEsMjU5Mi45LDM3Ni41Ii8+CjwvZz4KPGRpdiB4bWxucz0iIiBpZD0ic2FrYS1ndWktcm9vdCI+PGRpdj48ZGl2PjxzdHlsZS8+PC9kaXY+PC9kaXY+PC9kaXY+PC9zdmc+">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template></readthedocs-search><readthedocs-hotkeys><template shadowrootmode="open"><!----></template></readthedocs-hotkeys></body></html>

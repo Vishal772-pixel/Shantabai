@@ -1,0 +1,94 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 20px;
+    background: #4a90e2;
+    color: white;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+/* Featured Services Section */
+.featured-services {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #4a90e2;
+    margin-bottom: 20px;
+}
+
+/* Service Container */
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Service Styles */
+.service {
+    background: #fff;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px;
+    width: calc(30% - 20px); /* Adjust for three columns */
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center; /* Center align text */
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service h3 {
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Service Image Styles */
+.service-image {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 10px; /* Space below image */
+}
+
+/* List Styles */
+.service ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+}

@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Section Styles */
+.popular-dishes {
+    margin: 40px 0;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #e2754a;
+    margin-bottom: 20px;
+}
+
+/* Dish Container */
+.dish-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Dish Styles */
+.dish {
+    background: #fff;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px;
+    width: calc(25% - 20px); /* Four dishes per row */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.dish:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dish img {
+    width: 350px;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Button Styles */
+button {
+    background: #d6a954;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #cedf9f;
+    transform: scale(1.05);
+}
+
+/* Price Styles */
+.price {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+}

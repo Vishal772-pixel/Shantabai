@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Part-Time Maid Service</title>
+    <style>
+        /* Custom transition for buttons */
+        .btn {
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        
+        .btn:hover {
+            background-color: #4a4e69;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <div class="container mx-auto p-6">
+        <h1 class="text-3xl font-bold text-center mb-6">Part-Time Maid Service</h1>
+
+        <!-- Service Listings -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4">Cleaning Services Offered</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="bg-white p-4 rounded shadow hover:shadow-lg transition">
+                    <h3 class="font-bold">Regular Cleaning</h3>
+                    <p class="text-gray-600">Basic cleaning tasks including dusting, vacuuming, and mopping.</p>
+                    <p class="font-semibold">₹100/hour</p>
+                </div>
+                <div class="bg-white p-4 rounded shadow hover:shadow-lg transition">
+                    <h3 class="font-bold">Deep Cleaning</h3>
+                    <p class="text-gray-600">Thorough cleaning covering all areas including under furniture.</p>
+                    <p class="font-semibold">₹100/hour</p>
+                </div>
+                <div class="bg-white p-4 rounded shadow hover:shadow-lg transition">
+                    <h3 class="font-bold">Move-In/Move-Out Cleaning</h3>
+                    <p class="text-gray-600">Complete cleaning for a new or vacated home.</p>
+                    <p class="font-semibold">₹150/hour</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search and Filters -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4">Search for Maids</h2>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <input type="text" placeholder="Location" class="flex-1 p-2 border rounded">
+                <select class="flex-1 p-2 border rounded">
+                    <option>Type of Cleaning</option>
+                    <option>Regular Cleaning</option>
+                    <option>Deep Cleaning</option>
+                    <option>Move-In/Move-Out Cleaning</option>
+                </select>
+                <button class="btn flex-1 bg-blue-600 text-white p-2 rounded">Search</button>
+            </div>
+        </section>
+
+        <!-- Booking System -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4">Book a Cleaning Service</h2>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <input type="date" class="flex-1 p-2 border rounded">
+                <input type="time" class="flex-1 p-2 border rounded">
+                <button class="btn flex-1 bg-green-600 text-white p-2 rounded">Book Now</button>
+            </div>
+        </section>
+
+        <!-- Payment Processing -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4">Payment Options</h2>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <input type="text" placeholder="Credit/Debit Card Number" class="flex-1 p-2 border rounded">
+                <input type="text" placeholder="Expiry Date" class="flex-1 p-2 border rounded">
+                <input type="text" placeholder="CVV" class="flex-1 p-2 border rounded">
+                <a href="payment.html">
+                <button class="btn flex-1 bg-yellow-600 text-white p-2 rounded">Pay Now</button>
+            </a>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
